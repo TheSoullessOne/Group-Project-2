@@ -1,0 +1,17 @@
+*.user
+*.o
+*.exe
+.git
+build*
+*.autosave
+.qmake*
+Makefil*
+debu*
+object*
+ui_*
+*.xg*
+*.zy*
+*.zw*
+html*
+latex*
+*.Ax*
