@@ -24,7 +24,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    shapes.cpp \
+    renderarea.cpp
 
 HEADERS  += mainwindow.h \
     vector.h \

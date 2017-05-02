@@ -8,7 +8,7 @@
 class RenderArea : public QWidget
 {
 public:
-    enum class ShapeType {NoShape, Line, PolyLine, Polygon, Rectangle, Ellipse, Cricle, Text };
+    enum class ShapeType {NoShape, Line, Polyline, Polygon, Rectangle, Ellipse, Cricle, Text};
 
     RenderArea(QWidget *parent = 0);
 
@@ -19,8 +19,8 @@ public slots:
     void setShape(ShapeType shape);
     void setPen(const QPen &pen);
     void setBrush(const QBrush &brush);
-    void setAntialiased(bool antialiased);
-    void setTransformed(bool transformed);
+//    void setAntialiased(bool antialiased);
+//    void setTransformed(bool transformed);
 
 protected:
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
@@ -29,8 +29,8 @@ private:
     ShapeType shape;
     QPen pen;
     QBrush brush;
-    bool antialiased;
-    bool transformed;
+//    bool antialiased;
+//    bool transformed;
 };
 
 #endif // RENDERAREA_H

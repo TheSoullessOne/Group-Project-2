@@ -19,9 +19,9 @@ public:
     Window();
 
 private slots:
-//    void shapeChanged();
-//    void penChanged();
-//    void brushChanged();
+    void shapeChanged();
+    void penChanged();
+    void brushChanged();
 
 private:
     RenderArea *renderArea;
