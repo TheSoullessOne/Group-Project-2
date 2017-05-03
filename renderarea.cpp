@@ -1,23 +1,17 @@
 #include "renderarea.h"
+#include "shapes.h"
 
 #include <QPainter>
 
 RenderArea::RenderArea(QWidget *parent)
         :   QWidget(parent)
 {
-    shape = Polygon;
+//    shape = Polygon;
+
+    setBackgroundRole(QPalette::Base);
     setAutoFillBackground(true);
 }
 
-QSize RenderArea::minimumSizeHint() const
-{
-    return QSize(100, 100);
-}
-
-QSize RenderArea::sizeHint() const
-{
-    return QSize(400,200);
-}
 
 void RenderArea::setShape(ShapeType shape)  {
     this->shape = shape;
@@ -36,13 +30,9 @@ void RenderArea::setBrush(const QBrush &brush)
 }
 
 void RenderArea::paintEvent(QPaintEvent *event) {
-    static const QPoint points[4] =
-    {
-        QPoint(10,80),
-        QPoint(20,10),
-        QPoint(80,30),
-        QPoint(90,70)
-    };
+    QPainter painter(this);
+    Rectangle eRect(100,100,50,50);
 
-
+    painter.drawLine(QPoint(10, 10), QPoint(50,50));
+    painter.drawRect(eRect.getRect());
 }

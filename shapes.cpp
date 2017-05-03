@@ -11,21 +11,26 @@ Line::Line(double x1, double y1, double x2, double y2)  {
 Polyline::Polyline(vector<QPoint> points)
 {
     for(int i = 0; i < points.size(); ++i)  {
-        this.points[i] = points[i];
+        this->points[i] = points[i];
     }
 }
 
-Polygon(vector<QPoint> points)  {
+Polygon::Polygon(vector<QPoint> points)  {
     for(int i = 0; i < points.size(); ++i)  {
-        this.points[i] = points[i];
+        this->points[i] = points[i];
     }
 }
 
 
 Rectangle::Rectangle(double x1, double y1, double l, double w){
-    rect.setTopLeft(new QPoint(x1, y1));
+    rect.setTopLeft(QPoint(x1, y1));
     rect.setWidth(w);
     rect.setHeight(l);
+}
+
+QRect Rectangle::getRect() const
+{
+    return rect;
 }
 
 Ellipse::Ellipse(double x1, double y1, double Maj, double Min){

@@ -2,6 +2,7 @@
 #define SHAPE_H
 
 #include "mainwindow.h"
+#include "vector.h"
 #include <QPoint>
 #include <QRect>
 
@@ -9,6 +10,8 @@ class Shape : public QPainter
 {
     int shapeId;
     vector<QPoint> points;
+    QPen qPen;
+    QBrush qBrush;
     // UNSURE shapeDimensions???
     // UNSURE penColor
     // UNSURE penWidth
@@ -21,15 +24,15 @@ class Shape : public QPainter
     // UNSURE = unsure about what type
 
 public:
-    virtual void draw() = 0     {
+//    virtual void draw() = 0     {
 
-    }
-    virtual void move() = 0     {
+//    }
+//    virtual void move() = 0     {
 
-    }
-    virtual void perimeter() = 0    {
+//    }
+//    virtual void perimeter() = 0    {
 
-    }
+//    }
 };
 
 class Line : public Shape
@@ -69,6 +72,7 @@ class Rectangle : public Shape
 
 public:
     Rectangle(double x1, double y1, double l, double w);
+    QRect getRect() const;
 };
 
 
@@ -83,7 +87,7 @@ public:
 };
 
 
-class Circle : public Ellipse
+class Circle : public Shape
 {
     double radius;
     QPoint point;
