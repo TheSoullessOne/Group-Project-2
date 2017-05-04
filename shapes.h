@@ -12,6 +12,7 @@ class Shape : public QPainter
     vector<QPoint> points;
     QPen qPen;
     QBrush qBrush;
+
     // UNSURE shapeDimensions???
     // UNSURE penColor
     // UNSURE penWidth
