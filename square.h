@@ -5,6 +5,10 @@
 class Square : public Shape
 {
 public:
+    void draw();
+    void move();
+    double perimeter();
+
 
 private:
     double length;

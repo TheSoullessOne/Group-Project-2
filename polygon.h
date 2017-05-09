@@ -7,7 +7,10 @@ class Polygon : public Shape
 public:
     Polygon(vector<QPoint> points);
 
-    void draw(const int translate_x = 0, const int translate_y = 0);
+    void draw();
+    void move();
+    double perimeter();
+
 
 private:
     vector<QPoint> points;

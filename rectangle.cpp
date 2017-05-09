@@ -15,3 +15,13 @@ void Rectangle::draw()
 {
 
 }
+
+void Rectangle::move()
+{
+
+}
+
+double Rectangle::perimeter()
+{
+
+}

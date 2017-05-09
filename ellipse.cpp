@@ -6,3 +6,15 @@ Ellipse::Ellipse(double x1, double y1, double Maj, double Min){
     semiMajor = Maj;
     semiMinor = Min;
 }
+
+void Ellipse::draw(){
+
+}
+
+void Ellipse::move(){
+
+}
+
+double Ellipse::perimeter(){
+
+}

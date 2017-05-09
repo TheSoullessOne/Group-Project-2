@@ -11,6 +11,9 @@ public:
     const void setPoints(const QPoint& temp1, const QPoint& temp2);
 
     void draw();
+    void move();
+    double perimeter();
+
 
 private:
     QPoint pointOne;

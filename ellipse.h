@@ -7,7 +7,10 @@ class Ellipse : public Shape
 public:
     Ellipse(double x1, double y1, double Maj, double Min);
 
-    void draw(const int translate_x = 0, const int translate_y = 0);
+    void draw();
+    void move();
+    double perimeter();
+
 
 private:
     double semiMajor;

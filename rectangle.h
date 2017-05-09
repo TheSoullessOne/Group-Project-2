@@ -9,6 +9,9 @@ public:
     QRect getRect() const;
 
     void draw();
+    void move();
+    double perimeter();
+
 
 private:
     double length;

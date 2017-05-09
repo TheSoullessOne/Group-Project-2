@@ -8,7 +8,9 @@ public:
     Polyline(QPaintDevice* device = nullptr, int id = -1) : Shape(device, id, ShapeType::POLYLINE) {}
     Polyline(vector<QPoint> points);
 
-    void draw(const int translate_x = 0, const int translate_y = 0);
+    void draw();
+    void move();
+    double perimeter();
 
 private:
     vector<QPoint> points;

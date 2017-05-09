@@ -7,7 +7,9 @@ class Circle : public Shape
 public:
     Circle(double x1, double y1, double r);
 
-    void draw(const int translate_x = 0, const int translate_y = 0);
+    void draw();
+    void move();
+    double perimeter();
 
 private:
     double radius;

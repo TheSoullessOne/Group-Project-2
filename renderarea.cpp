@@ -1,5 +1,5 @@
 #include "renderarea.h"
-#include "shapes.h"
+#include "rectangle.h"
 
 #include <QPainter>
 

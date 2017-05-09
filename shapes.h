@@ -26,8 +26,8 @@ public:
     void defaultStyle();
     void drawRect(int width, int height);
     virtual void draw() = 0;
-//    virtual void move() = 0 {}
-//    virtual double perimeter() = 0 {}
+    virtual void move() = 0;
+    virtual double perimeter() = 0;
 
 protected:
 

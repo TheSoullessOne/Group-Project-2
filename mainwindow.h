@@ -9,6 +9,7 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QSpinBox>
+#include "shapes.h"
 
 namespace Ui {
 class MainWindow;
@@ -23,14 +24,10 @@ public:
     ~MainWindow();
 
 
-private slots:
-//    void shapeChanged();
-//    void penChanged();
-//    void brushChanged();
-
 private:
     Ui::MainWindow *ui;
     RenderArea *renderArea;
+    vector<Shape> myShapes;
 };
 
 #endif // MAINWINDOW_H

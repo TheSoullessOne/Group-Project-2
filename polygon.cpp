@@ -6,3 +6,14 @@ Polygon::Polygon(vector<QPoint> points)  {
     }
 }
 
+void Polygon::draw()    {
+
+}
+
+void Polygon::move()    {
+
+}
+
+double Polygon::perimeter()    {
+
+}
