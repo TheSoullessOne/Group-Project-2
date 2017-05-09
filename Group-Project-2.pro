@@ -27,12 +27,27 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     shapes.cpp \
     renderarea.cpp \
-    window.cpp
+    window.cpp \
+    line.cpp \
+    polyline.cpp \
+    polygon.cpp \
+    rectangle.cpp \
+    ellipse.cpp \
+    circle.cpp
 
 HEADERS  += mainwindow.h \
     vector.h \
     shapes.h \
     renderarea.h \
-    window.h
+    window.h \
+    line.h \
+    polyline.h \
+    polygon.h \
+    rectangle.h \
+    square.h \
+    ellipse.h \
+    circle.h \
+    text.h \
+    noshape.h
 
 FORMS    += mainwindow.ui
