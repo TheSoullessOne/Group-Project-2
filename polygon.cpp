@@ -17,3 +17,7 @@ void Polygon::move()    {
 double Polygon::perimeter()    {
 
 }
+
+double Polygon::area()    {
+
+}

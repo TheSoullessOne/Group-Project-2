@@ -18,3 +18,7 @@ void Ellipse::move(){
 double Ellipse::perimeter(){
 
 }
+
+double Ellipse::area(){
+
+}

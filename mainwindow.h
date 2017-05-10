@@ -5,11 +5,8 @@
 #include <QMainWindow>
 #include "renderarea.h"
 #include <QWidget>
-#include <QCheckBox>
-#include <QComboBox>
-#include <QLabel>
-#include <QSpinBox>
 #include "shapes.h"
+#include "vector.h"
 
 namespace Ui {
 class MainWindow;
@@ -23,11 +20,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-
 private:
     Ui::MainWindow *ui;
     RenderArea *renderArea;
-    vector<Shape> myShapes;
+    vector<QPainter> myShapes;
 };
 
 #endif // MAINWINDOW_H

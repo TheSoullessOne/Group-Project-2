@@ -17,3 +17,7 @@ void Circle::move(){
 double Circle::perimeter(){
 
 }
+
+double Circle::area(){
+
+}

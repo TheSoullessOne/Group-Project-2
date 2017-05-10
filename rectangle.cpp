@@ -25,3 +25,8 @@ double Rectangle::perimeter()
 {
 
 }
+
+double Rectangle::area()
+{
+
+}

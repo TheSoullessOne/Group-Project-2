@@ -16,5 +16,9 @@ void Polyline::move()   {
 }
 
 double Polyline::perimeter()   {
+    return 0;
+}
 
+double Polyline::area()   {
+    return 0;
 }

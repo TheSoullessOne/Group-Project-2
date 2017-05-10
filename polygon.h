@@ -10,7 +10,7 @@ public:
     void draw();
     void move();
     double perimeter();
-
+    double area();
 
 private:
     vector<QPoint> points;

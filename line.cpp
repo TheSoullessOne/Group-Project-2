@@ -16,5 +16,9 @@ void Line::move(){
 }
 
 double Line::perimeter(){
+    return 0;
+}
 
+double Line::area(){
+    return 0;
 }

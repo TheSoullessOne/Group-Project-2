@@ -28,6 +28,7 @@ public:
     virtual void draw() = 0;
     virtual void move() = 0;
     virtual double perimeter() = 0;
+    virtual double area() = 0;
 
 protected:
 
