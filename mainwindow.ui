@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1059</width>
-    <height>708</height>
+    <width>1126</width>
+    <height>822</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="login_page">
      <widget class="QLabel" name="login_title">
@@ -141,6 +141,14 @@
     </widget>
     <widget class="QWidget" name="admi_page">
      <widget class="QPushButton" name="adminPageBackButt">
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>570</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
       <property name="text">
        <string>BACK</string>
       </property>
@@ -315,6 +323,19 @@
          <string>BACK TO ADMIN</string>
         </property>
        </widget>
+       <widget class="QLabel" name="addShapeLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>30</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;REMOVE SHAPE (or text)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="edit_page">
        <widget class="QPushButton" name="back2AdminButt_3">
@@ -328,6 +349,19 @@
         </property>
         <property name="text">
          <string>BACK TO ADMIN</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="addShapeLabel_3">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>30</y>
+          <width>261</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;EDIT SHAPE (or text)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </widget>
@@ -491,7 +525,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="helpMainPage"/>
       <widget class="QWidget" name="how2_add"/>
@@ -561,7 +595,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1059</width>
+     <width>1126</width>
      <height>21</height>
     </rect>
    </property>
