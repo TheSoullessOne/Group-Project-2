@@ -3,6 +3,10 @@
 
 #include <QPainter>
 #include <QMainWindow>
+#include "renderarea.h"
+#include <QWidget>
+#include "shapes.h"
+#include "vector.h"
 
 namespace Ui {
 class MainWindow;
@@ -65,6 +69,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    RenderArea *renderArea;
+    vector<QPainter> myShapes;
 };
 
 #endif // MAINWINDOW_H

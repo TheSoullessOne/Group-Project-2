@@ -59,10 +59,10 @@ public:
     {
         return elem[n];
     }
-    const T& operator[] (int n)			// access: return reference
-    {
-        return elem[n];
-    }
+//    const T& operator[] (int n)			// access: return reference
+//    {
+//        return elem[n];
+//    }
     int size() const					// the current size
     {
         return size_v;
@@ -141,7 +141,7 @@ public:
             reserve(size() == 0 ? 8 : 2 * size());
         }
         ++size_v;
-        iterator temp = being() + index;
+        iterator temp = begin() + index;
         for(iterator pos = end() - 1; pos != temp; --pos)   {
             *pos = *(pos - 1);
         }

@@ -6,6 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
+    <width>701</width>
+    <height>379</height>
     <width>1126</width>
     <height>822</height>
    </rect>
@@ -13,6 +15,16 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <widget class="QWidget" name="centralWidget">
    <widget class="QStackedWidget" name="Main_Menu">
     <property name="geometry">
@@ -595,6 +607,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
+     <width>701</width>
      <width>1126</width>
      <height>21</height>
     </rect>
