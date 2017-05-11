@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include <QFileDialog>
 #include <QDebug>
+
+//PAGES
+//enums for the pages
 enum MainMenPages{
     LOGIN,
     ADMIN,
@@ -39,10 +42,17 @@ void MainWindow::on_loginEnterButton_clicked()
     ui->Main_Menu->setCurrentIndex(ADMIN);
     ui->Admin_Pages->setCurrentIndex(ADMIN_MEN);
 }
+
+void MainWindow::on_loginConctButt_clicked()
+{
+    ui->Main_Menu->setCurrentIndex(CONTACT);
+}
+
 void MainWindow::on_loginHelpButt_clicked()
 {
     ui->Main_Menu->setCurrentIndex(HELP);
 }
+
 void MainWindow::on_loginRevButt_clicked()
 {
  ui->Main_Menu->setCurrentIndex(REVIEWS);
@@ -105,6 +115,7 @@ void MainWindow::on_adminPageBackButt_clicked()
 {
     ui->Main_Menu->setCurrentIndex(LOGIN);
 }
+//----------------------------------------
 //BACK TO REGULAR MAIN MENU PAGES
 //   basic view pages
 //----------------------------------------
@@ -123,6 +134,7 @@ void MainWindow::on_viewHelpButt_clicked()
 {
     ui->Main_Menu->setCurrentIndex(HELP);
 }
+//----------------------------------------
 //  REVIEW PAGES
 //----------------------------------------
 //GO TO CONTACT PAGE FROM REV PAGE
@@ -140,7 +152,7 @@ void MainWindow::on_reviewPageBackButt_clicked()
 {
     ui->Main_Menu->setCurrentIndex(LOGIN);
 }
-
+//----------------------------------------------
 //HELP PAGES
 //----------------------------------------------
 //GO TO THE CONTACT PAGE FROM THE HELP PAGE
@@ -167,9 +179,11 @@ void MainWindow::on_contactBackButt_clicked()
     ui->Main_Menu->setCurrentIndex(LOGIN);
 }
 
+//OPENS A NEW FILE IN THE ADD FILE PAGE FROM THE ADMIN PAGES
 void MainWindow::on_addFromFileButton_clicked()
 {
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "C://", "Text File (*.txt)");
 
     qDebug() << fileName;
 }
+

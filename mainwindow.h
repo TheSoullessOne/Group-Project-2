@@ -68,6 +68,8 @@ private slots:
 
     void on_addFromFileButton_clicked();
 
+    void on_loginConctButt_clicked();
+
 private:
     Ui::MainWindow *ui;
     RenderArea *renderArea;
