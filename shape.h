@@ -2,7 +2,6 @@
 #define SHAPE_H
 
 #include <QPainter>
-//#include "vector.h"
 #include <QPoint>
 #include <QRect>
 
@@ -12,7 +11,7 @@ public:
     enum ShapeType {NOSHAPE, LINE, POLYLINE, POLYGON, RECTANGLE, ELLIPSE, CIRCLE, TEXT};
 
     Shape(QPaintDevice* device = nullptr, int id = -1, ShapeType shape = NOSHAPE);
-//    virtual ~Shape();
+    virtual ~Shape();
 
     ShapeType getShape() const;
     const QPen& getPen() const;
@@ -24,8 +23,8 @@ public:
     void setBrush(Qt::GlobalColor, Qt::BrushStyle);
 
     void defaultStyle();
-    void drawRect(int width, int height);
-    virtual void draw() = 0;
+//    void drawRect(int width, int height);
+    virtual void draw(QPainter *painter) = 0;
     virtual void move() = 0;
     virtual double perimeter() = 0;
     virtual double area() = 0;

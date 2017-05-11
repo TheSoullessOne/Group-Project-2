@@ -1,11 +1,11 @@
 #ifndef SQUARE_H
 #define SQUARE_H
-#include "Shapes.h"
+#include "shape.h"
 
 class Square : public Shape
 {
 public:
-    void draw();
+//    void draw(QPainter *painter);
     void move();
     double perimeter();
     double area();
