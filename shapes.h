@@ -2,12 +2,17 @@
 #define SHAPE_H
 
 #include "mainwindow.h"
-
+#include <QPainter>
 
 class Shape : public QPainter
 {
+public:
+    virtual void draw() = 0 {}
+    virtual void move() = 0 {}
+    virtual void perimeter() = 0 {}
+
+private:
     int shapeId;
-    // UNSURE shapeDimensions???
     // UNSURE penColor
     // UNSURE penWidth
     // UNSURE penStyle
@@ -17,63 +22,90 @@ class Shape : public QPainter
     // UNSURE brushStyle
 
     // UNSURE = unsure about what type
-
-public:
-    virtual void draw() = 0     {
-
-    }
-    virtual void move() = 0     {
-
-    }
-    virtual void perimeter() = 0    {
-
-    }
 };
 
-class Line : public Shape
-{
+//class Line : public Shape
+//{
+//public:
+//    Line(double x1, double y1, double x2, double y2);
+
+//private:
+
+//};
 
 
-public:
-    Line(double x1, double y1, double x2, double y2);
-};
+
 class PolyLine : public Shape
 {
+public:
+    // Constructor
+    PolyLine(){
+        arSize = 10;
+        points = new QPointF[arSize](0.0, 0.0);
+    }
 
+    // Inherited Functions
+    virtual void draw(){
+        this->drawPolyline(points, arSize);
+    }
+
+    virtual void move(){
+
+    }
+
+    virtual void perimeter(){
+        return 0;
+    }
 
 private:
-    vector<QPoint> points;
+    QPointF *points;
+    int      arSize;
 };
+
+
+
 class Polygon : public Shape
 {
-
-};
-class Rectangle : public Shape
-{
-    double length;
-    double width;
-
 public:
-    Rectangle(double x1, double y1, double l, double w);
+
+private:
+
 };
+
+//class Rectangle : public Shape
+//{
+//public:
+//    Rectangle(double x1, double y1, double l, double w);
+
+//private:
+//    double length;
+//    double width;
+//};
+
 class Ellipse : public Shape
 {
-    double semiMajor;
-    double semiMinor;
-
 public:
     Ellipse(double x1, double y1, double Maj, double Min);
+
+private:
+    double semiMajor;
+    double semiMinor;
 };
+
 class Circle : public Shape
 {
-    double radius;
-
 public:
     Circle(double x1, double y1, double r);
 
+private:
+    double radius;
 };
+
 class Text : public Shape
 {
+public:
+
+private:
 
 };
 

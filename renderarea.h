@@ -8,7 +8,7 @@
 class RenderArea : public QWidget
 {
 public:
-    enum class ShapeType {NoShape, Line, PolyLine, Polygon, Rectangle, Ellipse, Cricle, Text };
+    enum class ShapeType { NoShape, Line, PolyLine, Polygon, Rectangle, Ellipse, Circle, Text };
 
     RenderArea(QWidget *parent = 0);
 
@@ -27,10 +27,10 @@ protected:
 
 private:
     ShapeType shape;
-    QPen pen;
-    QBrush brush;
-    bool antialiased;
-    bool transformed;
+    QPen      pen;
+    QBrush    brush;
+    bool      antialiased;
+    bool      transformed;
 };
 
 #endif // RENDERAREA_H

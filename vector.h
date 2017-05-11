@@ -5,16 +5,17 @@ template <class T>
 class vector
 {
     int size_v;
-    T* elem;
+    T*  elem;
     int space;      // size+free_space
 
 public:
     vector()
     {
         size_v = 0;
-        elem = NULL;
-        space = 0;
+        elem   = NULL;
+        space  = 0;
     }
+
     explicit vector(int yup)
         :   size_v{yup}, elem{new double[yup]}, space{yup}
     {
@@ -23,12 +24,16 @@ public:
         }
 
     }
-    vector(const vector& other)                   // copy constructor
+
+    // copy constructor
+    vector(const vector& other)
         :   size_v{other.size_v}, elem{new double[other.size_v]}, space{other.size_v}
     {
         copy(other.elem, other.elem + size_v, elem);
     }
-    vector& operator=(const vector& other)		// copy assignment
+
+    // copy assignment
+    vector& operator=(const vector& other)
     {
         double* temp = new double[other.size_v];
         copy(other.elem, other.elem + size_v, elem);
@@ -37,7 +42,9 @@ public:
         size_v = other.size_v;
         return *this;
     }
-    vector(const vector&& other)				// move constructor
+
+    // move constructor
+    vector(const vector&& other)
     {
         this->size_v = other.size_v;
         this->elem   = other.elem;
@@ -46,32 +53,45 @@ public:
         delete elem;
         other.space = 0;
     }
-    vector& operator=(const vector&& other)	// move assignment
+
+    // move assignment
+    vector& operator=(const vector&& other)
     {
 
     }
-    ~vector()						// destructor
+
+    // destructor
+    ~vector()
     {
         delete[] elem;
     }
 
-    T& operator[] (int n)				// access: return reference
+    // access: return reference
+    T& operator[] (int n)
     {
         return elem[n];
     }
-    const T& operator[] (int n)			// access: return reference
+
+    // access: return reference
+    const T& operator[] (int n)
     {
         return elem[n];
     }
-    int size() const					// the current size
+
+    // the current size
+    int size() const
     {
         return size_v;
     }
-    int capacity() const				// current available space
+
+    // current available space
+    int capacity() const
     {
         return space;
     }
-    void resize(int newSize)			// grow
+
+    // grow
+    void resize(int newSize)
     {
         reserve(newSize);
         for(int i =0; i < newSize; ++i) {
@@ -79,10 +99,13 @@ public:
         }
         size_v = newSize;
     }
-    void push_back(double d)			// add element
+
+    // add element
+    void push_back(double d)
     {
+        // start with 5 elements
         if(space == 0)  {
-            reserve(5);                 // start with 5 elements
+            reserve(5);
         }
         else if(size_v == space)
         {
@@ -91,7 +114,9 @@ public:
         elem[size_v] = d;
         ++size_v;
     }
-    void reserve(int newAlloc)			// get more space
+
+    // get more space
+    void reserve(int newAlloc)
     {
         if(newAlloc <= space)   {
             return;
@@ -104,15 +129,19 @@ public:
         elem = temp;
         space = newAlloc;
     }
+
     using iterator = T*;
     using const_iterator = T*;
-    iterator begin()			// points to first element
+
+    // points to first element
+    iterator begin()
     {
         if(size_v == 0) {
             return nullptr;
         }
         return &elem[0];
     }
+
     const_iterator begin() const
     {
         if(size_v == 0) {
@@ -120,13 +149,16 @@ public:
         }
         return &elem[0];
     }
-    iterator end()			// points to one beyond the last element
+
+    // points to one beyond the last element
+    iterator end()
     {
         if(size_v == 0) {
             return nullptr;
         }
         return &elem[size_v];
     }
+
     const_iterator end() const
     {
         if(size_v == 0) {
@@ -134,7 +166,9 @@ public:
         }
         return &elem[size_v];
     }
-    iterator insert(iterator p, const T& v)// insert a new element v before p
+
+    // insert a new element v before p
+    iterator insert(iterator p, const T& v)
     {
         int index = p - begin();
         if(size() == capacity())    {
@@ -148,7 +182,9 @@ public:
         *(begin() + index) = v;
         return temp;
     }
-    iterator erase(iterator p)		  // remove element pointed to by p
+
+    // remove element pointed to by p
+    iterator erase(iterator p)
     {
         if(p == end())  {
             return p;
