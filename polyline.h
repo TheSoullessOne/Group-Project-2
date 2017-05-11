@@ -7,7 +7,7 @@ class Polyline : public Shape
 {
 public:
     Polyline(QPaintDevice* device = nullptr, int id = -1) : Shape(device, id, ShapeType::POLYLINE) {}
-    Polyline(vector<QPoint> points);
+    Polyline();
 
     void draw();
     void move();
@@ -15,7 +15,8 @@ public:
     double area();
 
 private:
-    vector<QPoint> points;
+    QPointF *points;
+    int      arSize;
 };
 
 #endif // POLYLINE_H

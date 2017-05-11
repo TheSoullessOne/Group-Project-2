@@ -12,13 +12,8 @@ public:
     vector()
     {
         size_v = 0;
-<<<<<<< HEAD
-        elem   = NULL;
-        space  = 0;
-=======
         elem = nullptr;
         space = 0;
->>>>>>> 4cc6752cbd00fe11930da0c8bb4a521dfadcb5f9
     }
 
     explicit vector(int yup)
@@ -76,23 +71,12 @@ public:
     {
         return elem[n];
     }
-<<<<<<< HEAD
 
-    // access: return reference
-    const T& operator[] (int n)
-    {
-        return elem[n];
-    }
-
-    // the current size
-    int size() const
-=======
 //    const T& operator[] (int n)			// access: return reference
 //    {
 //        return elem[n];
 //    }
     int size() const					// the current size
->>>>>>> 4cc6752cbd00fe11930da0c8bb4a521dfadcb5f9
     {
         return size_v;
     }

@@ -21,24 +21,6 @@ public:
 
 private:
     RenderArea *renderArea;
-<<<<<<< HEAD
-    QLabel     *shapeLabel;
-    QLabel     *penWidthLabel;
-    QLabel     *penStyleLabel;
-    QLabel     *penCapLabel;
-    QLabel     *penJoinLabel;
-    QLabel     *brushStyleLabel;
-    QLabel     *otherOptionsLabel;
-    QComboBox  *shapeComboBox;
-    QSpinBox   *penWidthSpinBox;
-    QComboBox  *penStyleComboBox;
-    QComboBox  *penCapComboBox;
-    QComboBox  *penJoinComboBox;
-    QComboBox  *brushStyleComboBox;
-    QCheckBox  *antialiasingCheckBox;
-    QCheckBox  *transformationCheckBox;
-=======
->>>>>>> 4cc6752cbd00fe11930da0c8bb4a521dfadcb5f9
 };
 
 #endif // WINDOW_H
