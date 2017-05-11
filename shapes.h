@@ -1,6 +1,7 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
+<<<<<<< HEAD
 #include "mainwindow.h"
 #include <QPainter>
 
@@ -62,8 +63,26 @@ private:
     int      arSize;
 };
 
+=======
+#include <QPainter>
+//#include "vector.h"
+#include <QPoint>
+#include <QRect>
 
+class Shape : public QPainter
+{
+public:
+    enum ShapeType {NOSHAPE, LINE, POLYLINE, POLYGON, RECTANGLE, ELLIPSE, CIRCLE, TEXT};
 
+    Shape(QPaintDevice* device = nullptr, int id = -1, ShapeType shape = NOSHAPE);
+//    virtual ~Shape();
+>>>>>>> 4cc6752cbd00fe11930da0c8bb4a521dfadcb5f9
+
+    ShapeType getShape() const;
+    const QPen& getPen() const;
+    const QBrush& getBrush() const;
+
+<<<<<<< HEAD
 class Polygon : public Shape
 {
 public:
@@ -106,7 +125,27 @@ class Text : public Shape
 public:
 
 private:
+=======
+    void setShape(ShapeType shape);
+    void setPen(Qt::GlobalColor, int width, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle);
+    void setPen(Qt::GlobalColor);
+    void setBrush(Qt::GlobalColor, Qt::BrushStyle);
+
+    void defaultStyle();
+    void drawRect(int width, int height);
+    virtual void draw() = 0;
+    virtual void move() = 0;
+    virtual double perimeter() = 0;
+    virtual double area() = 0;
+
+protected:
+
+    int shapeId;
+    ShapeType shape;
+//    vector<QPoint> points;
+    QPen qPen;
+    QBrush qBrush;
+>>>>>>> 4cc6752cbd00fe11930da0c8bb4a521dfadcb5f9
 
 };
-
 #endif // SHAPE_H

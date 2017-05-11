@@ -18,13 +18,10 @@ class Window : public QWidget
 public:
     Window();
 
-private slots:
-//    void shapeChanged();
-//    void penChanged();
-//    void brushChanged();
 
 private:
     RenderArea *renderArea;
+<<<<<<< HEAD
     QLabel     *shapeLabel;
     QLabel     *penWidthLabel;
     QLabel     *penStyleLabel;
@@ -40,6 +37,8 @@ private:
     QComboBox  *brushStyleComboBox;
     QCheckBox  *antialiasingCheckBox;
     QCheckBox  *transformationCheckBox;
+=======
+>>>>>>> 4cc6752cbd00fe11930da0c8bb4a521dfadcb5f9
 };
 
 #endif // WINDOW_H

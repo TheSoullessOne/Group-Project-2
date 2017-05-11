@@ -4,33 +4,33 @@
 #include <QBrush>
 #include <QPen>
 #include <QWidget>
+#include "manager.h"
 
 class RenderArea : public QWidget
 {
 public:
+<<<<<<< HEAD
     enum class ShapeType { NoShape, Line, PolyLine, Polygon, Rectangle, Ellipse, Circle, Text };
 
+=======
+>>>>>>> 4cc6752cbd00fe11930da0c8bb4a521dfadcb5f9
     RenderArea(QWidget *parent = 0);
-
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
-    QSize sizeHint() const Q_DECL_OVERRIDE;
-
-public slots:
-    void setShape(ShapeType shape);
-    void setPen(const QPen &pen);
-    void setBrush(const QBrush &brush);
-    void setAntialiased(bool antialiased);
-    void setTransformed(bool transformed);
+    manager* getShapeManager();
+    void addThisShape(Shape* shape);
 
 protected:
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
 private:
+<<<<<<< HEAD
     ShapeType shape;
     QPen      pen;
     QBrush    brush;
     bool      antialiased;
     bool      transformed;
+=======
+    manager* shapeManager;
+>>>>>>> 4cc6752cbd00fe11930da0c8bb4a521dfadcb5f9
 };
 
 #endif // RENDERAREA_H
