@@ -27,7 +27,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->Main_Menu->setCurrentIndex(LOGIN);
 
-//    ui->addRenderWindow->getShapeManager()->addShape(new Rectangle(10,10,50,50));
 }
 
 MainWindow::~MainWindow()

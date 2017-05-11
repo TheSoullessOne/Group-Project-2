@@ -6,9 +6,9 @@ Polygon::Polygon(vector<QPoint> points)  {
     }
 }
 
-void Polygon::draw()    {
+//void Polygon::draw()    {
 
-}
+//}
 
 void Polygon::move()    {
 

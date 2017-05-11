@@ -1,6 +1,6 @@
 #ifndef POLYGON_H
 #define POLYGON_H
-#include "Shapes.h"
+#include "shape.h"
 #include "vector.h"
 
 class Polygon : public Shape
@@ -8,7 +8,7 @@ class Polygon : public Shape
 public:
     Polygon(vector<QPoint> points);
 
-    void draw();
+//    void draw();
     void move();
     double perimeter();
     double area();

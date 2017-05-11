@@ -1,13 +1,13 @@
 #ifndef ELLIPSE_H
 #define ELLIPSE_H
-#include "Shapes.h"
+#include "shape.h"
 
 class Ellipse : public Shape
 {
 public:
     Ellipse(double x1, double y1, double Maj, double Min);
 
-    void draw();
+//    void draw();
     void move();
     double perimeter();
     double area();

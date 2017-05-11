@@ -25,7 +25,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    shapes.cpp \
     renderarea.cpp \
     window.cpp \
     line.cpp \
@@ -34,11 +33,11 @@ SOURCES += main.cpp\
     rectangle.cpp \
     ellipse.cpp \
     circle.cpp \
-    manager.cpp
+    manager.cpp \
+    shape.cpp
 
 HEADERS  += mainwindow.h \
     vector.h \
-    shapes.h \
     renderarea.h \
     window.h \
     line.h \
@@ -50,7 +49,8 @@ HEADERS  += mainwindow.h \
     circle.h \
     text.h \
     noshape.h \
-    manager.h
+    manager.h \
+    shape.h
 
 FORMS    += mainwindow.ui
 

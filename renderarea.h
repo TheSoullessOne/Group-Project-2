@@ -5,19 +5,20 @@
 #include <QPen>
 #include <QWidget>
 #include "manager.h"
+#include <QPainter>
 
 class RenderArea : public QWidget
 {
 public:
     RenderArea(QWidget *parent = 0);
-    manager* getShapeManager();
+    Manager* getShapeManager();
     void addThisShape(Shape* shape);
 
 protected:
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
 private:
-    manager* shapeManager;
+    Manager* shapeManager;
 };
 
 #endif // RENDERAREA_H

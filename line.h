@@ -1,6 +1,6 @@
 #ifndef LINE_H
 #define LINE_H
-#include "Shapes.h"
+#include "shape.h"
 
 class Line : public Shape
 {
@@ -10,7 +10,7 @@ public:
 
     const void setPoints(const QPoint& temp1, const QPoint& temp2);
 
-    void draw();
+//    void draw();
     void move();
     double perimeter();
     double area();
