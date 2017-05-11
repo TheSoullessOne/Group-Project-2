@@ -1,9 +1,14 @@
-#include "shapes.h"
+#include "shape.h"
 
-Shape::Shape(QPaintDevice *device, int id, Shape::ShapeType shape)  : QPainter(device)
+Shape::Shape(QPaintDevice *device, int id, Shape::ShapeType shape)
 {
     this->shapeId = id;
     this->shape = shape;
+}
+
+Shape::~Shape()
+{
+
 }
 
 Shape::ShapeType Shape::getShape() const

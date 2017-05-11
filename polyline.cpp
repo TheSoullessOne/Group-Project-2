@@ -7,9 +7,9 @@ Polyline::Polyline(vector<QPoint> points)
     }
 }
 
-void Polyline::draw()   {
+//void Polyline::draw()   {
 
-}
+//}
 
 void Polyline::move()   {
 

@@ -1,21 +1,21 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
-#include "Shapes.h"
+#include "shape.h"
 
 class Rectangle : public Shape
 {
 public:
-    Rectangle(double x1, double y1, double l, double w);
+    Rectangle(double x1, double y1, double l, double h);
     QRect getRect() const;
 
-    void draw();
+    void draw(QPainter *painter);
     void move();
     double perimeter();
     double area();
 
 private:
-    double length;
     double width;
+    double height;
     QPoint point;
     QRect rect;
 };

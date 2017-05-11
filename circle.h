@@ -1,13 +1,13 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
-#include "Shapes.h"
+#include "shape.h"
 
 class Circle : public Shape
 {
 public:
     Circle(double x1, double y1, double r);
 
-    void draw();
+//    void draw();
     void move();
     double perimeter();
     double area();

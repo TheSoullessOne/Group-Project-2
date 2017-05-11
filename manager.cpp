@@ -1,24 +1,27 @@
 #include "manager.h"
 
-manager::manager()
+Manager::Manager()
 {
 }
 
-void manager::addShape(Shape *shape){
+void Manager::addShape(Shape *shape)
+{
     myShapes.push_back(shape);
 }
 
-void manager::drawAll(QPainter *painter){
-    for(int i =0; i < myShapes.size(); ++i  ){
-        myShapes.at(i)->draw();
+void Manager::drawAll(QPainter *painter)
+{
+    for(int i =0; i < myShapes.size(); ++i  )
+    {
+        myShapes.at(i)->draw(painter);
     }
 }
 
-void manager::clear()   {
+void Manager::clear()   {
 
 }
 
-bool manager::isEmpty()  {
+bool Manager::isEmpty()  {
     if(myShapes.size() == 0)
     {
         return true;

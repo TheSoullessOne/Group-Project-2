@@ -1,14 +1,13 @@
 #ifndef MANAGER_H
 #define MANAGER_H
 
-#include "shapes.h"
+#include "shape.h"
 #include "vector.h"
 
-class manager
+class Manager
 {
 public:
-    manager();
-
+    Manager();
 
     void addShape(Shape *shape);
     void drawAll(QPainter *painter);
