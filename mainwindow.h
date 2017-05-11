@@ -1,12 +1,11 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QPainter>
 #include <QMainWindow>
 #include "renderarea.h"
 #include <QWidget>
-#include "shapes.h"
-#include "vector.h"
+#include "line.h"
+#include "rectangle.h"
 
 namespace Ui {
 class MainWindow;
@@ -67,10 +66,11 @@ private slots:
 
     void on_contactBackButt_clicked();
 
+    void on_addFromFileButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     RenderArea *renderArea;
-    vector<QPainter> myShapes;
 };
 
 #endif // MAINWINDOW_H

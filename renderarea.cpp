@@ -12,12 +12,20 @@ RenderArea::RenderArea(QWidget *parent)
     setAutoFillBackground(true);
 }
 
+manager* RenderArea::getShapeManager(){
+    return this->shapeManager;
+}
 
+void RenderArea::addThisShape(Shape* shape){
+    this->shapeManager->addShape(shape);
+    update();
+}
 
-void RenderArea::paintEvent(QPaintEvent *event) {
-    QPainter painter(this);
-    Rectangle *eRect = new Rectangle(100,100,50,50);
-
-    painter.drawLine(QPoint(10, 10), QPoint(50,50));
-    painter.drawRect(eRect->getRect());
+void RenderArea::paintEvent(QPaintEvent * /* event */) {
+        // Called when update() is called
+        if(!this->shapeManager->isEmpty()){
+            QPainter *painter = new QPainter(this);
+        this->shapeManager->drawAll(painter);
+        painter->end();
+    }
 }

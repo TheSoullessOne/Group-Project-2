@@ -33,7 +33,8 @@ SOURCES += main.cpp\
     polygon.cpp \
     rectangle.cpp \
     ellipse.cpp \
-    circle.cpp
+    circle.cpp \
+    manager.cpp
 
 HEADERS  += mainwindow.h \
     vector.h \
@@ -48,6 +49,10 @@ HEADERS  += mainwindow.h \
     ellipse.h \
     circle.h \
     text.h \
-    noshape.h
+    noshape.h \
+    manager.h
 
 FORMS    += mainwindow.ui
+
+DISTFILES += \
+    inputFile.txt

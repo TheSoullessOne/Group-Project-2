@@ -12,7 +12,7 @@ public:
     vector()
     {
         size_v = 0;
-        elem = NULL;
+        elem = nullptr;
         space = 0;
     }
     explicit vector(int yup)

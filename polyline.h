@@ -1,6 +1,7 @@
 #ifndef POLYLINE_H
 #define POLYLINE_H
 #include "Shapes.h"
+#include "vector.h"
 
 class Polyline : public Shape
 {

@@ -1,8 +1,8 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
-#include "mainwindow.h"
-#include "vector.h"
+#include <QPainter>
+//#include "vector.h"
 #include <QPoint>
 #include <QRect>
 
@@ -11,7 +11,7 @@ class Shape : public QPainter
 public:
     enum ShapeType {NOSHAPE, LINE, POLYLINE, POLYGON, RECTANGLE, ELLIPSE, CIRCLE, TEXT};
 
-    Shape(QPaintDevice* device = nullptr, int id = -1, ShapeType shape = ShapeType::NOSHAPE);
+    Shape(QPaintDevice* device = nullptr, int id = -1, ShapeType shape = NOSHAPE);
 //    virtual ~Shape();
 
     ShapeType getShape() const;

@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QFileDialog>
+#include <QDebug>
 enum MainMenPages{
     LOGIN,
     ADMIN,
@@ -20,6 +22,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->Main_Menu->setCurrentIndex(LOGIN);
+
+//    ui->addRenderWindow->getShapeManager()->addShape(new Rectangle(10,10,50,50));
 }
 
 MainWindow::~MainWindow()
@@ -87,6 +92,7 @@ void MainWindow::on_back2AdminButt_clicked()
 void MainWindow::on_back2AdminButt_2_clicked()
 {
     ui->Main_Menu->setCurrentIndex(ADMIN);
+    ui->Admin_Pages->setCurrentIndex(ADMIN_MEN);
 }
 //BACK BUTTON FROM EDIT PAGE
 void MainWindow::on_back2AdminButt_3_clicked()
@@ -159,4 +165,11 @@ void MainWindow::on_contactHelpButt_clicked()
 void MainWindow::on_contactBackButt_clicked()
 {
     ui->Main_Menu->setCurrentIndex(LOGIN);
+}
+
+void MainWindow::on_addFromFileButton_clicked()
+{
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "C://", "Text File (*.txt)");
+
+    qDebug() << fileName;
 }
