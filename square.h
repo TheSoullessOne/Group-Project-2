@@ -5,15 +5,17 @@
 class Square : public Shape
 {
 public:
-//    void draw(QPainter *painter);
+    Square(int x1, int y1, int length);
+
+    void draw(QPainter *painter);
     void move();
     double perimeter();
     double area();
 
 private:
     double length;
-    double width;
     QPoint point;
+    QRect rect;
 };
 
 #endif // SQUARE_H

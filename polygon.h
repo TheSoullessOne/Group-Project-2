@@ -8,13 +8,13 @@ class Polygon : public Shape
 public:
     Polygon(vector<QPoint> points);
 
-//    void draw();
+    void draw(QPainter* painter);
     void move();
     double perimeter();
     double area();
 
 private:
-    vector<QPoint> points;
+    QPolygon myPoly;
 };
 
 #endif // POLYGON_H

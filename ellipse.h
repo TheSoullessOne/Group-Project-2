@@ -7,14 +7,14 @@ class Ellipse : public Shape
 public:
     Ellipse(double x1, double y1, double Maj, double Min);
 
-//    void draw();
+    void draw(QPainter* painter);
     void move();
     double perimeter();
     double area();
 
 private:
-    double semiMajor;
-    double semiMinor;
+    int semiMajor;
+    int semiMinor;
     QPoint point;
 };
 

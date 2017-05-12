@@ -3,13 +3,15 @@
 
 #include "shape.h"
 #include "vector.h"
+#include <QDebug>
 
 class Manager
 {
 public:
     Manager();
 
-    void addShape(Shape *shape);
+    vector<Shape*> getVector();
+    void addShape(Shape* shape);
     void drawAll(QPainter *painter);
     void clear();
     bool isEmpty();
@@ -17,7 +19,7 @@ public:
 private:
 //    QColor getColor(QString color);
 //    Qt::BrushStyle getBrushStyle(QString brushStyle);
-    QVector<Shape*> myShapes;
+    vector<Shape*> myShapes;
 };
 
 #endif // MANAGER_H

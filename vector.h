@@ -1,5 +1,8 @@
 #ifndef VECTOR_H
 #define VECTOR_H
+#include <algorithm>
+#include <Qdebug>
+
 
 template <class T>
 class vector
@@ -24,9 +27,9 @@ public:
 
     }
     vector(const vector& other)                   // copy constructor
-        :   size_v{other.size_v}, elem{new double[other.size_v]}, space{other.size_v}
+        :   size_v{other.size_v}, elem{new T[other.size_v]}, space{other.size_v}
     {
-        copy(other.elem, other.elem + size_v, elem);
+        std::copy(other.elem, other.elem + size_v, elem);
     }
     vector& operator=(const vector& other)		// copy assignment
     {
@@ -79,24 +82,31 @@ public:
         }
         size_v = newSize;
     }
-    void push_back(double d)			// add element
+    void push_back(T d)			// add element
     {
+        qDebug() << "Inside push back";
         if(space == 0)  {
-            reserve(5);                 // start with 5 elements
+            qDebug() << "need to reserve room";
+            reserve(1);                 // start with 5 elements
         }
         else if(size_v == space)
         {
-            reserve(2 * space);
+            qDebug() << "need to extend vector";
+            reserve(space * 2);
         }
+        qDebug() << "finished reserving";
+        qDebug() << size_v;
         elem[size_v] = d;
+        qDebug() << "finished adding";
         ++size_v;
+        qDebug() << "Finished push back";
     }
     void reserve(int newAlloc)			// get more space
     {
         if(newAlloc <= space)   {
             return;
         }
-        double* temp = new double[newAlloc];
+        T* temp = new T[newAlloc];
         for(int i = 0; i < size_v; ++i) {
             temp[i] = elem[i];
         }

@@ -9,13 +9,13 @@ public:
     Polyline(QPaintDevice* device = nullptr, int id = -1) : Shape(device, id, ShapeType::POLYLINE) {}
     Polyline(vector<QPoint> points);
 
-//    void draw();
+    void draw(QPainter *painter);
     void move();
     double perimeter();
     double area();
 
 private:
-    vector<QPoint> points;
+    QPolygon myPoly;
 };
 
 #endif // POLYLINE_H

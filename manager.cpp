@@ -4,16 +4,22 @@ Manager::Manager()
 {
 }
 
+vector<Shape*> Manager::getVector()
+{
+    return this->myShapes;
+}
+
 void Manager::addShape(Shape *shape)
 {
-    myShapes.push_back(shape);
+    qDebug() << "Inside add shape";
+    this->myShapes.push_back(shape);
 }
 
 void Manager::drawAll(QPainter *painter)
 {
     for(int i =0; i < myShapes.size(); ++i  )
     {
-        myShapes.at(i)->draw(painter);
+        myShapes[i]->draw(painter);
     }
 }
 
