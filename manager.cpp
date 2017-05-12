@@ -2,11 +2,7 @@
 
 Manager::Manager()
 {
-}
-
-vector<Shape*> Manager::getVector()
-{
-    return this->myShapes;
+    this->myShapes.clear();
 }
 
 void Manager::addShape(Shape *shape)

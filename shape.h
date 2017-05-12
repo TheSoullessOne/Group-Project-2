@@ -5,7 +5,7 @@
 #include <QPoint>
 #include <QRect>
 
-class Shape : public QPainter
+class Shape
 {
 public:
     enum ShapeType {NOSHAPE, LINE, POLYLINE, POLYGON, RECTANGLE, ELLIPSE, CIRCLE, TEXT};
@@ -34,7 +34,6 @@ protected:
 
     int shapeId;
     ShapeType shape;
-//    vector<QPoint> points;
     QPen qPen;
     QBrush qBrush;
 

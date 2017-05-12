@@ -21,9 +21,9 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    this->renderArea = new RenderArea();
     ui->setupUi(this);
     ui->Main_Menu->setCurrentIndex(LOGIN);
-
 }
 
 MainWindow::~MainWindow()

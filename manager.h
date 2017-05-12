@@ -4,13 +4,13 @@
 #include "shape.h"
 #include "vector.h"
 #include <QDebug>
+#include <QVector>
 
 class Manager
 {
 public:
     Manager();
 
-    vector<Shape*> getVector();
     void addShape(Shape* shape);
     void drawAll(QPainter *painter);
     void clear();

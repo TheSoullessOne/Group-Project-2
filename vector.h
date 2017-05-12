@@ -12,14 +12,14 @@ class vector
     int space;      // size+free_space
 
 public:
-    vector()
+    vector() : size_v{0}, space{0}
     {
-        size_v = 0;
-        elem = nullptr;
-        space = 0;
+//        size_v = 0;
+        elem = new T[0];
+//        space = 0;
     }
     explicit vector(int yup)
-        :   size_v{yup}, elem{new double[yup]}, space{yup}
+        :   size_v{yup}, elem{new T[yup]}, space{yup}
     {
         for (int i = 0; i < size_v; ++i)    {
             elem[i] = 0;
@@ -33,7 +33,7 @@ public:
     }
     vector& operator=(const vector& other)		// copy assignment
     {
-        double* temp = new double[other.size_v];
+        T* temp = new T[other.size_v];
         copy(other.elem, other.elem + size_v, elem);
         delete[] elem;
         elem = temp;
@@ -77,29 +77,22 @@ public:
     void resize(int newSize)			// grow
     {
         reserve(newSize);
-        for(int i =0; i < newSize; ++i) {
+        for(int i = 0; i < newSize; ++i) {
             elem[i] = 0;
         }
         size_v = newSize;
     }
     void push_back(T d)			// add element
     {
-        qDebug() << "Inside push back";
-        if(space == 0)  {
-            qDebug() << "need to reserve room";
-            reserve(1);                 // start with 5 elements
+        if (space == 0){
+            reserve(8);					// start with space for 8 elements
         }
-        else if(size_v == space)
+        else if (size_v == space)
         {
-            qDebug() << "need to extend vector";
-            reserve(space * 2);
+            reserve(2*space);	// get more space
         }
-        qDebug() << "finished reserving";
-        qDebug() << size_v;
-        elem[size_v] = d;
-        qDebug() << "finished adding";
+        elem[size_v] = d;							// add d at end
         ++size_v;
-        qDebug() << "Finished push back";
     }
     void reserve(int newAlloc)			// get more space
     {
@@ -169,6 +162,14 @@ public:
         delete (end() - 1);
         --size_v;
         return p;
+    }
+    void clear()
+    {
+        for(int i = 0; i < this->size(); ++i)
+        {
+            elem[i] = nullptr;
+        }
+        resize(0);
     }
 };
 
