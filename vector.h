@@ -28,15 +28,9 @@ public:
         }
 
     }
-<<<<<<< HEAD
 
-    // copy constructor
-    vector(const vector& other)
-        :   size_v{other.size_v}, elem{new double[other.size_v]}, space{other.size_v}
-=======
     vector(const vector& other)                   // copy constructor
         :   size_v{other.size_v}, elem{new T[other.size_v]}, space{other.size_v}
->>>>>>> 364ad6cb29646d716e66cc8e3579d101441069d3
     {
         std::copy(other.elem, other.elem + size_v, elem);
     }
@@ -113,20 +107,11 @@ public:
         }
         size_v = newSize;
     }
-<<<<<<< HEAD
 
-    // add element
-    void push_back(double d)
-    {
-        // start with 5 elements
-        if(space == 0)  {
-            reserve(5);
-=======
     void push_back(T d)			// add element
     {
         if (space == 0){
             reserve(8);					// start with space for 8 elements
->>>>>>> 364ad6cb29646d716e66cc8e3579d101441069d3
         }
         else if (size_v == space)
         {

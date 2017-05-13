@@ -1,15 +1,5 @@
 #include "Polyline.h"
 
-<<<<<<< HEAD
-Polyline::Polyline()    {
-    arSize = 10;
-    points = new QPointF[arSize];
-}
-
-void Polyline::draw()   {
-    QPainter painter(this);
-    painter.drawPolyline(points, arSize);
-=======
 Polyline::Polyline(vector<QPoint> points)
 {
     for(int i = 0; i < points.size(); ++i)  {
@@ -20,7 +10,6 @@ Polyline::Polyline(vector<QPoint> points)
 void Polyline::draw(QPainter *painter)
 {
     painter->drawPolyline(myPoly);
->>>>>>> 364ad6cb29646d716e66cc8e3579d101441069d3
 }
 
 void Polyline::move()   {
