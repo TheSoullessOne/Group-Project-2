@@ -54,6 +54,11 @@ void MainWindow::on_loginConctButt_clicked()
     ui->Main_Menu->setCurrentIndex(CONTACT);
 }
 
+void MainWindow::on_graphicsView_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint)
+{
+
+}
+
 void MainWindow::on_loginHelpButt_clicked()
 {
     ui->Main_Menu->setCurrentIndex(HELP);
@@ -316,24 +321,19 @@ void MainWindow::on_addFromFileButton_clicked()
         {
             if(shapeType == "Line")
             {
-                qDebug() << "POINTS";
-                qDebug() << points[0] + " - " + points[1] + " " + points[2] + " " + points[3];
                 Line *temp = new Line(points[0].toInt(),
                                      points[1].toInt(),
                                      points[2].toInt(),
                                      points[3].toInt());
-                qDebug() << "CREATED LINE";
+                temp->setShape(shapeType);
                 temp->setId(tempId);
-                qDebug() << temp->getId();
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
                             penCapStyle,
                             penJoinStyle);
                 temp->setBrush(brushColor, brushStyle);
-                qDebug() << "finished altering the shape";
                 this->renderArea->addThisShape(temp);
-                qDebug() << "added shape succesfully";
             }
             else if(shapeType == "Polyline")
             {
@@ -347,6 +347,7 @@ void MainWindow::on_addFromFileButton_clicked()
                     ++indexTwo;
                 }
                 Polyline *temp = new Polyline(myPoints);
+                temp->setShape(shapeType);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -367,6 +368,7 @@ void MainWindow::on_addFromFileButton_clicked()
                     ++indexTwo;
                 }
                 Polygon *temp = new Polygon(myPoints);
+                temp->setShape(shapeType);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -381,6 +383,7 @@ void MainWindow::on_addFromFileButton_clicked()
                                                points[1].toInt(),
                                                points[2].toInt(),
                                                points[3].toInt());
+                temp->setShape(shapeType);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -394,6 +397,7 @@ void MainWindow::on_addFromFileButton_clicked()
                 Square *temp = new Square(points[0].toInt(),
                                          points[1].toInt(),
                                          points[2].toInt());
+                temp->setShape(shapeType);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -408,6 +412,7 @@ void MainWindow::on_addFromFileButton_clicked()
                                            points[1].toInt(),
                                            points[2].toInt(),
                                            points[3].toInt());
+                temp->setShape(shapeType);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -421,6 +426,7 @@ void MainWindow::on_addFromFileButton_clicked()
                 Circle *temp = new Circle(points[0].toInt(),
                                          points[1].toInt(),
                                          points[2].toInt());
+                temp->setShape(shapeType);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -435,6 +441,7 @@ void MainWindow::on_addFromFileButton_clicked()
                                      points[1].toInt(),
                                      points[2].toInt(),
                                      points[3].toInt());
+                temp->setShape(shapeType);
                 temp->setAlignFlag(textAlignment);
                 temp->setTextPointSize(textPointSize);
                 temp->setText(textString);
@@ -444,16 +451,8 @@ void MainWindow::on_addFromFileButton_clicked()
                 temp->setFontFamily(textFontFamily);
                 this->renderArea->getShapeManager()->addShape(temp);
             }
-            qDebug() << "Added shape ";
-            qDebug() << shapeType;
-            qDebug() << "MYSHAPES SIZE:";
-            qDebug() << this->renderArea->getShapeManager()->size();
-            this->renderArea->update();
-            if(this->renderArea->getShapeManager()->isEmpty())
-            {
-                qDebug() << "ITS EMPTY YA FOOL";
-            }
         }
+        this->renderArea->update();
     }
 }
 

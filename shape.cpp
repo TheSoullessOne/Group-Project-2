@@ -11,9 +11,9 @@ Shape::~Shape()
 
 }
 
-Shape::ShapeType Shape::getShape() const
+QString Shape::getShape() const
 {
-    return this->shape;
+    return this->shapeType;
 }
 
 const QPen &Shape::getPen() const
@@ -26,9 +26,9 @@ const QBrush &Shape::getBrush() const
     return this->qBrush;
 }
 
-void Shape::setShape(Shape::ShapeType shape)
+void Shape::setShape(QString shape)
 {
-    this->shape = shape;
+    this->shapeType = shape;
 }
 
 void Shape::setPen(Qt::GlobalColor color, int width, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle)
