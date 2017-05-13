@@ -13,11 +13,11 @@ public:
     Shape(QPaintDevice* device = nullptr, int id = -1, ShapeType shape = NOSHAPE);
     virtual ~Shape();
 
-    ShapeType getShape() const;
+    QString getShape() const;
     const QPen& getPen() const;
     const QBrush& getBrush() const;
 
-    void setShape(ShapeType shape);
+    void setShape(QString shape);
     void setPen(Qt::GlobalColor, int width, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle);
     void setPen(QColor);
     void setBrush(Qt::GlobalColor, Qt::BrushStyle);
@@ -31,7 +31,7 @@ public:
     virtual double area() = 0;
 
 protected:
-
+    QString shapeType;
     int shapeId;
     ShapeType shape;
     QPen qPen;

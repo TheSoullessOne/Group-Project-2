@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="login_page">
      <widget class="QLabel" name="login_title">
@@ -238,7 +238,7 @@
 background-color: rgb(254, 255, 217);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="main_admin_page">
        <widget class="QPushButton" name="addShapeButt">
@@ -454,12 +454,6 @@ background-color: rgb(254, 255, 217);</string>
          </item>
         </layout>
        </widget>
-       <zorder>back2AdminButt</zorder>
-       <zorder>addShapeLabel</zorder>
-       <zorder>addRender</zorder>
-       <zorder>label</zorder>
-       <zorder>label_2</zorder>
-       <zorder>verticalLayoutWidget</zorder>
       </widget>
       <widget class="QWidget" name="remove_page">
        <widget class="QPushButton" name="back2AdminButt_2">

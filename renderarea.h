@@ -6,6 +6,7 @@
 #include <QWidget>
 #include "manager.h"
 #include <QPainter>
+#include <QMessageBox>
 
 class RenderArea : public QWidget
 {
