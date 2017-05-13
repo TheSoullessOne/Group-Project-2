@@ -5,7 +5,17 @@
 #include "renderarea.h"
 #include <QWidget>
 #include "line.h"
+#include "polyline.h"
+#include "polygon.h"
 #include "rectangle.h"
+#include "square.h"
+#include "ellipse.h"
+#include "circle.h"
+#include "text.h"
+#include <QTextStream>
+#include <QFile>
+#include <QStringList>
+#include <QMessageBox>
 
 namespace Ui {
 class MainWindow;
@@ -67,6 +77,22 @@ private slots:
     void on_contactBackButt_clicked();
 
     void on_addFromFileButton_clicked();
+
+    Qt::GlobalColor convertColor(QString);
+
+    Qt::PenStyle convertPenStyle(QString);
+
+    Qt::PenCapStyle convertPenCapStyle(QString);
+
+    Qt::PenJoinStyle convertPenJoinStyle(QString);
+
+    Qt::BrushStyle convertBrushStyle(QString);
+
+    Qt::AlignmentFlag convertAlignmentFlag(QString);
+
+    QFont::Style convertTextFontStyle(QString);
+
+    QFont::Weight convertTextFontWeight(QString);
 
 private:
     Ui::MainWindow *ui;

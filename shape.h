@@ -5,7 +5,7 @@
 #include <QPoint>
 #include <QRect>
 
-class Shape : public QPainter
+class Shape
 {
 public:
     enum ShapeType {NOSHAPE, LINE, POLYLINE, POLYGON, RECTANGLE, ELLIPSE, CIRCLE, TEXT};
@@ -19,11 +19,12 @@ public:
 
     void setShape(ShapeType shape);
     void setPen(Qt::GlobalColor, int width, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle);
-    void setPen(Qt::GlobalColor);
+    void setPen(QColor);
     void setBrush(Qt::GlobalColor, Qt::BrushStyle);
+    void setId(int);
+    int getId() const;
 
     void defaultStyle();
-//    void drawRect(int width, int height);
     virtual void draw(QPainter *painter) = 0;
     virtual void move() = 0;
     virtual double perimeter() = 0;
@@ -33,7 +34,6 @@ protected:
 
     int shapeId;
     ShapeType shape;
-//    vector<QPoint> points;
     QPen qPen;
     QBrush qBrush;
 };

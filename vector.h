@@ -1,42 +1,51 @@
 #ifndef VECTOR_H
 #define VECTOR_H
+#include <algorithm>
+#include <Qdebug>
+#include <QObject>
 
 template <class T>
 class vector
 {
+
     int size_v;
     T*  elem;
     int space;      // size+free_space
 
 public:
-    vector()
+    vector() : size_v{0}, space{0}
     {
-        size_v = 0;
-        elem = nullptr;
-        space = 0;
+//        size_v = 0;
+        elem = new T[0];
+//        space = 0;
     }
 
     explicit vector(int yup)
-        :   size_v{yup}, elem{new double[yup]}, space{yup}
+        :   size_v{yup}, elem{new T[yup]}, space{yup}
     {
         for (int i = 0; i < size_v; ++i)    {
             elem[i] = 0;
         }
 
     }
+<<<<<<< HEAD
 
     // copy constructor
     vector(const vector& other)
         :   size_v{other.size_v}, elem{new double[other.size_v]}, space{other.size_v}
+=======
+    vector(const vector& other)                   // copy constructor
+        :   size_v{other.size_v}, elem{new T[other.size_v]}, space{other.size_v}
+>>>>>>> 364ad6cb29646d716e66cc8e3579d101441069d3
     {
-        copy(other.elem, other.elem + size_v, elem);
+        std::copy(other.elem, other.elem + size_v, elem);
     }
 
     // copy assignment
     vector& operator=(const vector& other)
     {
-        double* temp = new double[other.size_v];
-        copy(other.elem, other.elem + size_v, elem);
+        T* temp = new T[other.size_v];
+        std::copy(other.elem, other.elem + size_v, elem);
         delete[] elem;
         elem = temp;
         size_v = other.size_v;
@@ -57,7 +66,15 @@ public:
     // move assignment
     vector& operator=(const vector&& other)
     {
-
+        delete[] this->elem;
+        this->size_v = 0;
+        this->space = 0;
+        T* temp = new T[other.size_v];
+        std::copy(other.elem, other.elem + size_v, elem);
+        delete[] elem;
+        elem = temp;
+        size_v = other.size_v;
+        return *this;
     }
 
     // destructor
@@ -91,11 +108,12 @@ public:
     void resize(int newSize)
     {
         reserve(newSize);
-        for(int i =0; i < newSize; ++i) {
+        for(int i = 0; i < newSize; ++i) {
             elem[i] = 0;
         }
         size_v = newSize;
     }
+<<<<<<< HEAD
 
     // add element
     void push_back(double d)
@@ -103,12 +121,18 @@ public:
         // start with 5 elements
         if(space == 0)  {
             reserve(5);
+=======
+    void push_back(T d)			// add element
+    {
+        if (space == 0){
+            reserve(8);					// start with space for 8 elements
+>>>>>>> 364ad6cb29646d716e66cc8e3579d101441069d3
         }
-        else if(size_v == space)
+        else if (size_v == space)
         {
-            reserve(2 * space);
+            reserve(2*space);	// get more space
         }
-        elem[size_v] = d;
+        elem[size_v] = d;							// add d at end
         ++size_v;
     }
 
@@ -118,7 +142,7 @@ public:
         if(newAlloc <= space)   {
             return;
         }
-        double* temp = new double[newAlloc];
+        T* temp = new T[newAlloc];
         for(int i = 0; i < size_v; ++i) {
             temp[i] = elem[i];
         }
@@ -192,6 +216,14 @@ public:
         delete (end() - 1);
         --size_v;
         return p;
+    }
+    void clear()
+    {
+        for(int i = 0; i < this->size(); ++i)
+        {
+            elem[i] = nullptr;
+        }
+        resize(0);
     }
 };
 

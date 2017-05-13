@@ -6,18 +6,21 @@ Circle::Circle(double x1, double y1, double r)  {
     radius = r;
 }
 
-//void Circle::draw(){
-
-//}
+void Circle::draw(QPainter* painter)
+{
+    painter->drawEllipse(point, radius, radius);
+}
 
 void Circle::move(){
 
 }
 
-double Circle::perimeter(){
-
+double Circle::perimeter()
+{
+    return 0;
 }
 
-double Circle::area(){
-
+double Circle::area()
+{
+    return 0;
 }
