@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include <QFileDialog>
 #include <QDebug>
+
+//PAGES
+//enums for the pages
 enum MainMenPages{
     LOGIN,
     ADMIN,
@@ -15,6 +18,13 @@ enum AdminPages{
     ADD_SHAPE,
     REM_SHAPE,
     EDIT
+};
+enum HelpPages{
+    HELP_MEN,
+    HELP_ADD,
+    HELP_REM,
+    HELP_EDIT,
+    HELP_VIEW
 };
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -38,10 +48,17 @@ void MainWindow::on_loginEnterButton_clicked()
     ui->Main_Menu->setCurrentIndex(ADMIN);
     ui->Admin_Pages->setCurrentIndex(ADMIN_MEN);
 }
+
+void MainWindow::on_loginConctButt_clicked()
+{
+    ui->Main_Menu->setCurrentIndex(CONTACT);
+}
+
 void MainWindow::on_loginHelpButt_clicked()
 {
     ui->Main_Menu->setCurrentIndex(HELP);
 }
+
 void MainWindow::on_loginRevButt_clicked()
 {
  ui->Main_Menu->setCurrentIndex(REVIEWS);
@@ -104,6 +121,7 @@ void MainWindow::on_adminPageBackButt_clicked()
 {
     ui->Main_Menu->setCurrentIndex(LOGIN);
 }
+//----------------------------------------
 //BACK TO REGULAR MAIN MENU PAGES
 //   basic view pages
 //----------------------------------------
@@ -122,6 +140,7 @@ void MainWindow::on_viewHelpButt_clicked()
 {
     ui->Main_Menu->setCurrentIndex(HELP);
 }
+//----------------------------------------
 //  REVIEW PAGES
 //----------------------------------------
 //GO TO CONTACT PAGE FROM REV PAGE
@@ -139,7 +158,7 @@ void MainWindow::on_reviewPageBackButt_clicked()
 {
     ui->Main_Menu->setCurrentIndex(LOGIN);
 }
-
+//----------------------------------------------
 //HELP PAGES
 //----------------------------------------------
 //GO TO THE CONTACT PAGE FROM THE HELP PAGE
@@ -166,6 +185,7 @@ void MainWindow::on_contactBackButt_clicked()
     ui->Main_Menu->setCurrentIndex(LOGIN);
 }
 
+//OPENS A NEW FILE IN THE ADD FILE PAGE FROM THE ADMIN PAGES
 void MainWindow::on_addFromFileButton_clicked()
 {
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), QCoreApplication::applicationDirPath(), "Text File (*.txt)");
@@ -529,7 +549,41 @@ Qt::PenCapStyle MainWindow::convertPenCapStyle(QString penCapStyle)
 
     return style;
 }
+//-------------------------------------------------------
+//HELP PAGES
+//-------------------------------------------------------
 
+//BUTTON TO GO TO THE HELP ADD PAGE FROM MAIN HELP PAGE
+void MainWindow::on_pushButton_4_clicked()
+{
+    ui->help_pages->setCurrentIndex(HELP_ADD);
+}
+
+//BUTTON TO GO TO HELP REM PAGE FROM MAIN HELP PAGE
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->help_pages->setCurrentIndex(HELP_REM);
+}
+
+//BUTTON TO GO TO THE HELP EDIT MAIN HELP PAGE
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->help_pages->setCurrentIndex(HELP_EDIT);
+}
+
+//BUTTON TO GO TO THE HELP VIEW PAGE FROM THE MAIN HELP PAGE
+void MainWindow::on_pushButton_clicked()
+{
+    ui->help_pages->setCurrentIndex(HELP_VIEW);
+}
+
+//BACK BUTTONS FROM THE HELP PAGES BACK TO MAIN HELP PAGE
+//-----------------------------------------------------------
+//------------------------------------------------------------
+
+
+//erics sttuff added to input file
+//---------------------------------------------------------------
 Qt::PenJoinStyle MainWindow::convertPenJoinStyle(QString penJoinStyle)
 {
     Qt::PenJoinStyle style;

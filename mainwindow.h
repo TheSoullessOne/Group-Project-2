@@ -77,6 +77,17 @@ private slots:
     void on_contactBackButt_clicked();
 
     void on_addFromFileButton_clicked();
+    void on_loginConctButt_clicked();
+
+    void on_graphicsView_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint);
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_clicked();
 
     Qt::GlobalColor convertColor(QString);
 
@@ -93,7 +104,6 @@ private slots:
     QFont::Style convertTextFontStyle(QString);
 
     QFont::Weight convertTextFontWeight(QString);
-
 private:
     Ui::MainWindow *ui;
     RenderArea *renderArea;
