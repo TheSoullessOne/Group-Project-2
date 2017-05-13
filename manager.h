@@ -9,17 +9,21 @@
 class Manager
 {
 public:
-    Manager();
+
+    static Manager* getInstance();
 
     void addShape(Shape* shape);
     void drawAll(QPainter *painter);
     void clear();
     bool isEmpty();
+    int size();
 
 private:
+    Manager();
 //    QColor getColor(QString color);
 //    Qt::BrushStyle getBrushStyle(QString brushStyle);
     vector<Shape*> myShapes;
+    static Manager* instance;
 };
 
 #endif // MANAGER_H

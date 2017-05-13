@@ -426,6 +426,13 @@ void MainWindow::on_addFromFileButton_clicked()
             }
             qDebug() << "Added shape ";
             qDebug() << shapeType;
+            qDebug() << "MYSHAPES SIZE:";
+            qDebug() << this->renderArea->getShapeManager()->size();
+            this->renderArea->update();
+            if(this->renderArea->getShapeManager()->isEmpty())
+            {
+                qDebug() << "ITS EMPTY YA FOOL";
+            }
         }
     }
 }

@@ -1,8 +1,19 @@
 #include "manager.h"
 
+Manager* Manager::instance = 0;
+
 Manager::Manager()
 {
     this->myShapes.clear();
+}
+
+Manager *Manager::getInstance()
+{
+    if(instance == NULL)
+    {
+        instance = new Manager();
+    }
+    return instance;
 }
 
 void Manager::addShape(Shape *shape)
@@ -24,9 +35,10 @@ void Manager::clear()   {
 }
 
 bool Manager::isEmpty()  {
-    if(myShapes.size() == 0)
-    {
-        return true;
-    }
-    return false;
+    return myShapes.size() == 0;
+}
+
+int Manager::size()
+{
+    return myShapes.size();
 }

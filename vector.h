@@ -2,11 +2,12 @@
 #define VECTOR_H
 #include <algorithm>
 #include <Qdebug>
-
+#include <QObject>
 
 template <class T>
 class vector
 {
+
     int size_v;
     T* elem;
     int space;      // size+free_space
@@ -34,7 +35,7 @@ public:
     vector& operator=(const vector& other)		// copy assignment
     {
         T* temp = new T[other.size_v];
-        copy(other.elem, other.elem + size_v, elem);
+        std::copy(other.elem, other.elem + size_v, elem);
         delete[] elem;
         elem = temp;
         size_v = other.size_v;
@@ -51,7 +52,15 @@ public:
     }
     vector& operator=(const vector&& other)	// move assignment
     {
-
+        delete[] this->elem;
+        this->size_v = 0;
+        this->space = 0;
+        T* temp = new T[other.size_v];
+        std::copy(other.elem, other.elem + size_v, elem);
+        delete[] elem;
+        elem = temp;
+        size_v = other.size_v;
+        return *this;
     }
     ~vector()						// destructor
     {
