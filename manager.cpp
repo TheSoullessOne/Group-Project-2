@@ -26,6 +26,8 @@ void Manager::drawAll(QPainter *painter)
 {
     for(int i =0; i < myShapes.size(); ++i  )
     {
+        painter->setPen(myShapes[i]->getPen());
+        painter->setBrush(myShapes[i]->getBrush());
         myShapes[i]->draw(painter);
     }
 }
