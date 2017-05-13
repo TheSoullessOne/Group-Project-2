@@ -20,16 +20,7 @@ protected:
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
 private:
-<<<<<<< HEAD
-    ShapeType shape;
-    QPen      pen;
-    QBrush    brush;
-    bool      antialiased;
-    bool      transformed;
-    manager* shapeManager;
-=======
     Manager* shapeManager;
->>>>>>> 751f56418ceeb9d1ff967b1a752c72659bc9ba6d
 };
 
 #endif // RENDERAREA_H

@@ -301,7 +301,7 @@
        <widget class="RenderArea" name="addRender" native="true">
         <property name="geometry">
          <rect>
-          <x>140</x>
+          <x>170</x>
           <y>140</y>
           <width>421</width>
           <height>131</height>
