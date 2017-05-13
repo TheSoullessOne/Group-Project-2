@@ -15,7 +15,7 @@ public:
     void addThisShape(Shape* shape);
 
 protected:
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
 
 private:
     Manager* shapeManager;

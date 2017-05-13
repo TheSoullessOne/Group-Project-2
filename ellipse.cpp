@@ -7,18 +7,21 @@ Ellipse::Ellipse(double x1, double y1, double Maj, double Min){
     semiMinor = Min;
 }
 
-//void Ellipse::draw(){
-
-//}
+void Ellipse::draw(QPainter* painter)
+{
+    painter->drawEllipse(point, semiMajor, semiMinor);
+}
 
 void Ellipse::move(){
 
 }
 
-double Ellipse::perimeter(){
-
+double Ellipse::perimeter()
+{
+    return 0;
 }
 
-double Ellipse::area(){
-
+double Ellipse::area()
+{
+    return 0;
 }

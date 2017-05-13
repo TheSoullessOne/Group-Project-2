@@ -7,10 +7,11 @@ class Line : public Shape
 public:
     Line(QPaintDevice* device = nullptr, int id = -1) : Shape(device, id, ShapeType::LINE) {}
     Line(double x1, double y1, double x2, double y2);
+    Line(QPoint points[]);
 
-    const void setPoints(const QPoint& temp1, const QPoint& temp2);
+//    const void setPoints(const QPoint& temp1, const QPoint& temp2);
 
-//    void draw();
+    void draw(QPainter *painter);
     void move();
     double perimeter();
     double area();

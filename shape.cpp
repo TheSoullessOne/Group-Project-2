@@ -40,7 +40,7 @@ void Shape::setPen(Qt::GlobalColor color, int width, Qt::PenStyle style, Qt::Pen
     this->qPen.setJoinStyle(joinStyle);
 }
 
-void Shape::setPen(Qt::GlobalColor color)
+void Shape::setPen(QColor color)
 {
     this->qPen.setColor(color);
 }
@@ -49,4 +49,14 @@ void Shape::setBrush(Qt::GlobalColor color, Qt::BrushStyle style)
 {
     this->qBrush.setColor(color);
     this->qBrush.setStyle(style);
+}
+
+void Shape::setId(int id)
+{
+    this->shapeId = id;
+}
+
+int Shape::getId() const
+{
+    return this->shapeId;
 }
