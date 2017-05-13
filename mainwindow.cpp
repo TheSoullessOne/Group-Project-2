@@ -19,6 +19,13 @@ enum AdminPages{
     REM_SHAPE,
     EDIT
 };
+enum HelpPages{
+    HELP_MEN,
+    HELP_ADD,
+    HELP_REM,
+    HELP_EDIT,
+    HELP_VIEW
+};
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -185,4 +192,32 @@ void MainWindow::on_addFromFileButton_clicked()
 
     qDebug() << fileName;
 }
+//-------------------------------------------------------
+//HELP PAGES
+//-------------------------------------------------------
 
+//BUTTON TO GO TO THE HELP ADD PAGE FROM MAIN HELP PAGE
+void MainWindow::on_pushButton_4_clicked()
+{
+    ui->help_pages->setCurrentIndex(HELP_ADD);
+}
+
+//BUTTON TO GO TO HELP REM PAGE FROM MAIN HELP PAGE
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->help_pages->setCurrentIndex(HELP_REM);
+}
+
+//BUTTON TO GO TO THE HELP EDIT MAIN HELP PAGE
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->help_pages->setCurrentIndex(HELP_EDIT);
+}
+
+//BUTTON TO GO TO THE HELP VIEW PAGE FROM THE MAIN HELP PAGE
+void MainWindow::on_pushButton_clicked()
+{
+    ui->help_pages->setCurrentIndex(HELP_VIEW);
+}
+
+//BACK BUTTONS FROM THE HELP PAGES BACK TO MAIN HELP PAGE
