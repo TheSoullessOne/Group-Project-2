@@ -3,21 +3,27 @@
 
 #include "shape.h"
 #include "vector.h"
+#include <QDebug>
+#include <QVector>
 
 class Manager
 {
 public:
-    Manager();
 
-    void addShape(Shape *shape);
+    static Manager* getInstance();
+
+    void addShape(Shape* shape);
     void drawAll(QPainter *painter);
     void clear();
     bool isEmpty();
+    int size();
 
 private:
+    Manager();
 //    QColor getColor(QString color);
 //    Qt::BrushStyle getBrushStyle(QString brushStyle);
-    QVector<Shape*> myShapes;
+    vector<Shape*> myShapes;
+    static Manager* instance;
 };
 
 #endif // MANAGER_H

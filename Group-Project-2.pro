@@ -34,7 +34,9 @@ SOURCES += main.cpp\
     ellipse.cpp \
     circle.cpp \
     manager.cpp \
-    shape.cpp
+    shape.cpp \
+    square.cpp \
+    text.cpp
 
 HEADERS  += mainwindow.h \
     vector.h \

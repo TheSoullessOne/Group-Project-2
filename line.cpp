@@ -7,9 +7,9 @@ Line::Line(double x1, double y1, double x2, double y2)  {
     pointTwo.setY(y2);
 }
 
-//void Line::draw(){
-
-//}
+void Line::draw(QPainter *painter){
+    painter->drawLine(pointOne, pointTwo);
+}
 
 void Line::move(){
 

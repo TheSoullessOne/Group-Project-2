@@ -7,28 +7,30 @@ RenderArea::RenderArea(QWidget *parent):   QWidget(parent)
 {
     setBackgroundRole(QPalette::Base);
     setAutoFillBackground(true);
-    this->shapeManager = new Manager();
-    this->getShapeManager()->addShape(new Rectangle(10,10,50,50));
-
+    shapeManager = Manager::getInstance();
+    this->addThisShape(new Rectangle(10,10,50,50));
 }
 
 Manager* RenderArea::getShapeManager(){
-    return this->shapeManager;
+    return Manager::getInstance();
 }
 
-void RenderArea::addThisShape(Shape* shape){
-    this->shapeManager->addShape(shape);
-//    update();
+void RenderArea::addThisShape(Shape* shape)
+{
+    qDebug() << "Inside add this shape";
+    this->getShapeManager()->addShape(shape);
+    qDebug() << "About to update";
+    update();
+    qDebug() << "finished updating";
 }
 
-void RenderArea::paintEvent(QPaintEvent *event) {
+void RenderArea::paintEvent(QPaintEvent * ) {
+    qDebug() << "MYSHAPES SIZE:";
+    qDebug() << this->getShapeManager()->size();
     // Called when update() is called
-    if(!this->shapeManager->isEmpty()){
-        qDebug() << "Inside if statement";
+    if(!this->getShapeManager()->isEmpty()){
         QPainter *painter = new QPainter(this);
-        qDebug() << "Created painter device";
-        this->shapeManager->drawAll(painter);
-        qDebug() << "Called drawall";
+        this->getShapeManager()->drawAll(painter);
         painter->end();
     }
     else
