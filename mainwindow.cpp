@@ -2,6 +2,10 @@
 #include "ui_mainwindow.h"
 #include <QFileDialog>
 #include <QDebug>
+#include <QStyle>
+#include <QSize>
+#include <QApplication>
+#include <QDesktopWidget>
 
 //PAGES
 //enums for the pages
@@ -11,7 +15,8 @@ enum MainMenPages{
     VIEW,
     REVIEWS,
     HELP,
-    CONTACT
+    CONTACT,
+    MAINTENANCE
 };
 enum AdminPages{
     ADMIN_MEN,
@@ -40,6 +45,30 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+////-------------------------------------------------------
+////Expands the window to 90% and centers it
+////-------------------------------------------------------
+//void MainWindow::centerAndResize() {
+//   // get the dimensions available on this screen, depending on individ computer
+//   QSize availableSize = qApp->desktop()->availableGeometry().size();
+//   int width = availableSize.width();
+//   int height = availableSize.height();
+//   qDebug() << "Available dimensions " << width << "x" << height;
+//   width = 100;                         // sets width to 90% of the screen size
+//   height = 100;                        // sets height to 90% of the screen size
+//   qDebug() << "The dimensions are " << width << "x" << height;
+//   QSize newSize( width, height );
+//   setGeometry(
+//       QStyle::alignedRect(
+//           Qt::LeftToRight,
+//           Qt::AlignCenter,
+//           newSize,
+//           qApp->desktop()->availableGeometry()
+//       )
+//   );
+//}
+
 //-------------------------------------------------------
 //Main Menu Stuff
 //-------------------------------------------------------
@@ -696,3 +725,14 @@ QFont::Weight MainWindow::convertTextFontWeight(QString textFontWeight)
     return weight;
 }
 
+
+void MainWindow::on_maintenanceBackButt_clicked()
+{
+        ui->Main_Menu->setCurrentIndex(HELP);
+}
+
+
+void MainWindow::on_maintenanceButt_clicked()
+{
+        ui->Main_Menu->setCurrentIndex(MAINTENANCE);
+}
