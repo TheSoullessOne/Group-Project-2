@@ -595,6 +595,20 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
            </rect>
           </property>
          </widget>
+         <widget class="QLabel" name="label_19">
+          <property name="geometry">
+           <rect>
+            <x>800</x>
+            <y>60</y>
+            <width>61</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Index to 
+delete:</string>
+          </property>
+         </widget>
         </widget>
         <widget class="QWidget" name="edit_page">
          <widget class="QPushButton" name="back2AdminButt_3">
