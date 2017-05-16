@@ -17,6 +17,8 @@ QRect Rectangle::getRect() const
 
 void Rectangle::draw(QPainter *painter)
 {
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
     painter->drawRect(this->getRect());
 }
 

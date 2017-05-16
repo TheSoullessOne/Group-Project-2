@@ -16,9 +16,13 @@ Manager *Manager::getInstance()
     return instance;
 }
 
+void Manager::draw(int index, QPainter* painter)
+{
+    this->myShapes[index]->draw(painter);
+}
+
 void Manager::addShape(Shape *shape)
 {
-    qDebug() << "Inside add shape";
     this->myShapes.push_back(shape);
 }
 
@@ -26,8 +30,6 @@ void Manager::drawAll(QPainter *painter)
 {
     for(int i =0; i < myShapes.size(); ++i  )
     {
-        painter->setPen(myShapes[i]->getPen());
-        painter->setBrush(myShapes[i]->getBrush());
         myShapes[i]->draw(painter);
     }
 }
@@ -43,4 +45,9 @@ bool Manager::isEmpty()  {
 int Manager::size()
 {
     return myShapes.size();
+}
+
+vector<Shape*>& Manager::getVector()
+{
+    return this->myShapes;
 }

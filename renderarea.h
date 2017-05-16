@@ -16,6 +16,7 @@ public:
     RenderArea(QWidget *parent = 0);
     Manager* getShapeManager();
     void addThisShape(Shape* shape);
+    void draw(int, QPainter *painter);
 
 protected:
     void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;

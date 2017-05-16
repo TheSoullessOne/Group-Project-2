@@ -32,17 +32,20 @@ enum HelpPages{
     HELP_VIEW
 };
 
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     this->renderArea = new RenderArea();
+    ui->addRender = new RenderArea();
     ui->setupUi(this);
     ui->Main_Menu->setCurrentIndex(LOGIN);
 }
 
 MainWindow::~MainWindow()
 {
+    OutputToFile();
     delete ui;
 }
 
@@ -270,7 +273,6 @@ void MainWindow::on_addFromFileButton_clicked()
 
     while(!inFile.atEnd())  {
         line = inFile.readLine();
-        qDebug() << " LINE: " + line;
         if(line != "")
         {
             stringParser = line.split(":");
@@ -289,7 +291,6 @@ void MainWindow::on_addFromFileButton_clicked()
             else if(key == "ShapeDimensions")
             {
                 value = value.trimmed();
-                qDebug() << "VALUE: " + value;
                 points = value.split(",");
             }
             else if(key == "PenColor")
@@ -370,6 +371,7 @@ void MainWindow::on_addFromFileButton_clicked()
                                      points[1].toInt(),
                                      points[2].toInt(),
                                      points[3].toInt());
+                temp->setDimensions(points);
                 temp->setShape(shapeType);
                 temp->setId(tempId);
                 temp->setPen(penColor,
@@ -392,7 +394,9 @@ void MainWindow::on_addFromFileButton_clicked()
                     ++indexTwo;
                 }
                 Polyline *temp = new Polyline(myPoints);
+                temp->setDimensions(points);
                 temp->setShape(shapeType);
+                temp->setId(tempId);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -413,7 +417,9 @@ void MainWindow::on_addFromFileButton_clicked()
                     ++indexTwo;
                 }
                 Polygon *temp = new Polygon(myPoints);
+                temp->setDimensions(points);
                 temp->setShape(shapeType);
+                temp->setId(tempId);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -428,7 +434,9 @@ void MainWindow::on_addFromFileButton_clicked()
                                                points[1].toInt(),
                                                points[2].toInt(),
                                                points[3].toInt());
+                temp->setDimensions(points);
                 temp->setShape(shapeType);
+                temp->setId(tempId);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -442,7 +450,9 @@ void MainWindow::on_addFromFileButton_clicked()
                 Square *temp = new Square(points[0].toInt(),
                                          points[1].toInt(),
                                          points[2].toInt());
+                temp->setDimensions(points);
                 temp->setShape(shapeType);
+                temp->setId(tempId);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -457,7 +467,9 @@ void MainWindow::on_addFromFileButton_clicked()
                                            points[1].toInt(),
                                            points[2].toInt(),
                                            points[3].toInt());
+                temp->setDimensions(points);
                 temp->setShape(shapeType);
+                temp->setId(tempId);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -471,7 +483,9 @@ void MainWindow::on_addFromFileButton_clicked()
                 Circle *temp = new Circle(points[0].toInt(),
                                          points[1].toInt(),
                                          points[2].toInt());
+                temp->setDimensions(points);
                 temp->setShape(shapeType);
+                temp->setId(tempId);
                 temp->setPen(penColor,
                             penWidth.toInt(),
                             penStyle,
@@ -486,7 +500,9 @@ void MainWindow::on_addFromFileButton_clicked()
                                      points[1].toInt(),
                                      points[2].toInt(),
                                      points[3].toInt());
+                temp->setDimensions(points);
                 temp->setShape(shapeType);
+                temp->setId(tempId);
                 temp->setAlignFlag(textAlignment);
                 temp->setTextPointSize(textPointSize);
                 temp->setText(textString);
@@ -739,6 +755,158 @@ QFont::Weight MainWindow::convertTextFontWeight(QString textFontWeight)
         weight = QFont::Weight::Normal;
     }
     return weight;
+}
+
+void MainWindow::OutputToFile()
+{
+    QString filename = "Save.txt";
+    QFile file( filename );
+    if ( file.open(QIODevice::ReadWrite) )
+    {
+        QTextStream output( &file );
+
+        for(int i = 0; i < this->renderArea->getShapeManager()->size(); ++i)
+        {
+            if(this->renderArea->getShapeManager()->getVector()[i]->getShape() == "Line")
+            {
+                output << endl;
+                output << "ShapeId: ";
+                output << this->renderArea->getShapeManager()->getVector()[i]->getId();
+                output << endl;
+                output << "ShapeType: ";
+                output << "Line";
+                output << endl;
+                output << "ShapeDimensions: ";
+                this->renderArea->getShapeManager()->getVector()[i]->printDimensions(output);
+                output << endl;
+                this->renderArea->getShapeManager()->getVector()[i]->printPen(output);
+            }
+            else if(this->renderArea->getShapeManager()->getVector()[i]->getShape() == "Polyline")
+            {
+                output << endl;
+                output << "ShapeId: ";
+                output << this->renderArea->getShapeManager()->getVector()[i]->getId();
+                output << endl;
+                output << "ShapeType: ";
+                output << "Polyline";
+                output << endl;
+                output << "ShapeDimensions: ";
+                this->renderArea->getShapeManager()->getVector()[i]->printDimensions(output);
+                output << endl;
+                this->renderArea->getShapeManager()->getVector()[i]->printPen(output);
+            }
+            else if(this->renderArea->getShapeManager()->getVector()[i]->getShape() == "Polygon")
+            {
+                output << endl;
+                output << "ShapeId: ";
+                output << this->renderArea->getShapeManager()->getVector()[i]->getId();
+                output << endl;
+                output << "ShapeType: ";
+                output << "Polygon";
+                output << endl;
+                output << "ShapeDimensions: ";
+                this->renderArea->getShapeManager()->getVector()[i]->printDimensions(output);
+                output << endl;
+                this->renderArea->getShapeManager()->getVector()[i]->printPen(output);
+                this->renderArea->getShapeManager()->getVector()[i]->printBrush(output);
+            }
+            else if(this->renderArea->getShapeManager()->getVector()[i]->getShape() == "Rectangle")
+            {
+                output << endl;
+                output << "ShapeId: ";
+                output << this->renderArea->getShapeManager()->getVector()[i]->getId();
+                output << endl;
+                output << "ShapeType: ";
+                output << "Rectangle";
+                output << endl;
+                output << "ShapeDimensions: ";
+                this->renderArea->getShapeManager()->getVector()[i]->printDimensions(output);
+                output << endl;
+                this->renderArea->getShapeManager()->getVector()[i]->printPen(output);
+                this->renderArea->getShapeManager()->getVector()[i]->printBrush(output);
+            }
+            else if(this->renderArea->getShapeManager()->getVector()[i]->getShape() == "Square")
+            {
+                output << endl;
+                output << "ShapeId: ";
+                output << this->renderArea->getShapeManager()->getVector()[i]->getId();
+                output << endl;
+                output << "ShapeType: ";
+                output << "Square";
+                output << endl;
+                output << "ShapeDimensions: ";
+                this->renderArea->getShapeManager()->getVector()[i]->printDimensions(output);
+                output << endl;
+                this->renderArea->getShapeManager()->getVector()[i]->printPen(output);
+                this->renderArea->getShapeManager()->getVector()[i]->printBrush(output);
+            }
+            else if(this->renderArea->getShapeManager()->getVector()[i]->getShape() == "Ellipse")
+            {
+                output << endl;
+                output << "ShapeId: ";
+                output << this->renderArea->getShapeManager()->getVector()[i]->getId();
+                output << endl;
+                output << "ShapeType: ";
+                output << "Ellipse";
+                output << endl;
+                output << "ShapeDimensions: ";
+                this->renderArea->getShapeManager()->getVector()[i]->printDimensions(output);
+                output << endl;
+                this->renderArea->getShapeManager()->getVector()[i]->printPen(output);
+                this->renderArea->getShapeManager()->getVector()[i]->printBrush(output);
+            }
+            else if(this->renderArea->getShapeManager()->getVector()[i]->getShape() == "Circle")
+            {
+                output << endl;
+                output << "ShapeId: ";
+                output << this->renderArea->getShapeManager()->getVector()[i]->getId();
+                output << endl;
+                output << "ShapeType: ";
+                output << "Circle";
+                output << endl;
+                output << "ShapeDimensions: ";
+                this->renderArea->getShapeManager()->getVector()[i]->printDimensions(output);
+                output << endl;
+                this->renderArea->getShapeManager()->getVector()[i]->printPen(output);
+                this->renderArea->getShapeManager()->getVector()[i]->printBrush(output);
+            }
+            else if(this->renderArea->getShapeManager()->getVector()[i]->getShape() == "Text")
+            {
+                output << endl;
+                output << "ShapeId: ";
+                output << this->renderArea->getShapeManager()->getVector()[i]->getId();
+                output << endl;
+                output << "ShapeType: ";
+                output << "Text";
+                output << endl;
+                output << "ShapeDimensions: ";
+                this->renderArea->getShapeManager()->getVector()[i]->printDimensions(output);
+                output << endl;
+                Text::printTextStuff(output, (static_cast<Text*>(this->renderArea->getShapeManager()->getVector()[i])));
+            }
+        }
+        output << endl;
+    }
+}
+
+
+void MainWindow::on_delIndexLineEdit_returnPressed()
+{
+    int indexToDel = ui->delIndexLineEdit->text().toInt();
+
+    if(!this->renderArea->getShapeManager()->isEmpty())
+    {
+        vector<Shape*>::iterator it = this->renderArea->getShapeManager()->getVector().begin() + indexToDel;
+        qDebug() << "before deletion";
+        this->renderArea->getShapeManager()->getVector().erase(it);
+        qDebug() << "removed shape";
+        update();
+    }
+    else
+    {
+
+        QMessageBox::critical(this, "Error", "No objects to draw.");
+    }
 }
 
 

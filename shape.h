@@ -4,6 +4,7 @@
 #include <QPainter>
 #include <QPoint>
 #include <QRect>
+#include "vector.h"
 
 class Shape
 {
@@ -23,6 +24,15 @@ public:
     void setBrush(Qt::GlobalColor, Qt::BrushStyle);
     void setId(int);
     int getId() const;
+    void setDimensions(QStringList);
+    void printDimensions(QTextStream &output);
+    void printPen(QTextStream &output);
+    void printBrush(QTextStream &output);
+    QString convertColorToString(QColor);
+    QString convertPenStyleToString(Qt::PenStyle);
+    QString convertPenCapStyleToString(Qt::PenCapStyle);
+    QString convertPenJoinStyleToString(Qt::PenJoinStyle);
+    QString convertBrushStyleToString(Qt::BrushStyle);
 
     void defaultStyle();
     virtual void draw(QPainter *painter) = 0;
@@ -31,6 +41,7 @@ public:
     virtual double area() = 0;
 
 protected:
+    vector<int> dimensions;
     QString shapeType;
     int shapeId;
     ShapeType shape;

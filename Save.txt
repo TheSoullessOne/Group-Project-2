@@ -37,7 +37,7 @@ PenStyle: DashLine
 PenCapStyle: RoundCap
 PenJoinStyle: RoundJoin
 BrushColor: red
-BrushStyle: VerPattern
+BrushStyle: NoBrush
 
 ShapeId: 5
 ShapeType: Square
@@ -79,7 +79,8 @@ TextString: Class Project 2 - 2D Graphics Modeler
 TextColor: blue
 TextAlignment: AlignCenter
 TextPointSize: 10
-TextFontFamily: Comic Sans MS
-TextFontStyle: FlatCap
-TextFontWeight: magenta
+TextFontFamily:  Comic Sans MS
+TextFontStyle: 2
+TextFontWeight: 50
+
 
