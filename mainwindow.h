@@ -16,6 +16,7 @@
 #include <QFile>
 #include <QStringList>
 #include <QMessageBox>
+#include <QApplication>
 
 namespace Ui {
 class MainWindow;
@@ -28,6 +29,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+//    void centerAndResize();
 
 private slots:
     void on_loginEnterButton_clicked();
@@ -109,6 +111,10 @@ private slots:
     void OutputToFile();
 
     void on_delIndexLineEdit_returnPressed();
+
+    void on_maintenanceBackButt_clicked();
+
+    void on_maintenanceButt_clicked();
 
 private:
     Ui::MainWindow *ui;
