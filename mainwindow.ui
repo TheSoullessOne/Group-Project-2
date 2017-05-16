@@ -24,7 +24,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="login_page">
        <property name="sizePolicy">
@@ -315,7 +315,7 @@
 background-color: rgb(254, 255, 217);</string>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="main_admin_page">
          <widget class="QPushButton" name="addShapeButt">
@@ -709,21 +709,11 @@ delete:</string>
          <string>CONTACT US</string>
         </property>
        </widget>
-       <widget class="QTextBrowser" name="textBrowser">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>180</y>
-          <width>891</width>
-          <height>361</height>
-         </rect>
-        </property>
-       </widget>
        <widget class="QPushButton" name="IdSortButton">
         <property name="geometry">
          <rect>
           <x>340</x>
-          <y>110</y>
+          <y>60</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -736,7 +726,7 @@ delete:</string>
         <property name="geometry">
          <rect>
           <x>420</x>
-          <y>110</y>
+          <y>60</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -749,7 +739,7 @@ delete:</string>
         <property name="geometry">
          <rect>
           <x>500</x>
-          <y>110</y>
+          <y>60</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -762,7 +752,7 @@ delete:</string>
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>100</y>
+          <y>50</y>
           <width>301</width>
           <height>41</height>
          </rect>
@@ -803,17 +793,27 @@ delete:</string>
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://youtu.be/L2WIg3xoSw8&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Learn more about us!!&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
+       <widget class="RenderArea" name="widget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>90</y>
+          <width>901</width>
+          <height>471</height>
+         </rect>
+        </property>
+       </widget>
        <zorder>wallpaper_2</zorder>
        <zorder>basicPagebackButt</zorder>
        <zorder>viewPageTitle</zorder>
        <zorder>viewHelpButt</zorder>
        <zorder>viewContButt</zorder>
-       <zorder>textBrowser</zorder>
        <zorder>IdSortButton</zorder>
        <zorder>areaSortButton</zorder>
        <zorder>perimeterSortButton</zorder>
        <zorder>pickSortListLabel</zorder>
        <zorder>label_14</zorder>
+       <zorder>widget</zorder>
       </widget>
       <widget class="QWidget" name="reviews_page">
        <widget class="QPushButton" name="reviewPageBackButt">
