@@ -11,6 +11,8 @@
 class RenderArea : public QWidget
 {
 public:
+    enum class ShapeType { NoShape, Line, PolyLine, Polygon, Rectangle, Ellipse, Circle, Text };
+
     RenderArea(QWidget *parent = 0);
     Manager* getShapeManager();
     void addThisShape(Shape* shape);
