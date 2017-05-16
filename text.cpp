@@ -77,8 +77,60 @@ QString Text::getFontFamily() const
     return font.family();
 }
 
+void Text::printTextStuff(QTextStream &output, Text *textShape)
+{
+    output << "TextString: ";
+    output << textShape->text;
+    output << endl;
+    output << "TextColor: ";
+    output << textShape->convertColorToString(textShape->qPen.color());
+    output << endl;
+    output << "TextAlignment: ";
+    output << textShape->convertAlignmentToString(textShape->flag);
+    output << endl;
+    output << "TextPointSize: ";
+    output << textShape->font.pointSize();
+    output << endl;
+    output << "TextFontFamily: ";
+    output << textShape->font.family();
+    output << endl;
+    output << "TextFontStyle: ";
+    output << textShape->font.style();
+    output << endl;
+    output << "TextFontWeight: ";
+    output << textShape->font.weight();
+    output << endl;
+}
+
+QString Text::convertAlignmentToString(Qt::AlignmentFlag flag)
+{
+    QString text;
+    if(flag == Qt::AlignmentFlag::AlignLeft)
+    {
+        text = "AlignLeft";
+    }
+    else if(flag == Qt::AlignmentFlag::AlignRight)
+    {
+        text = "AlignRight";
+    }
+    else if(flag == Qt::AlignmentFlag::AlignTop)
+    {
+        text = "AlignTop";
+    }
+    else if(flag == Qt::AlignmentFlag::AlignBottom)
+    {
+        text = "AlignBottom";
+    }
+    else if(flag == Qt::AlignmentFlag::AlignCenter)
+    {
+        text = "AlignCenter";
+    }
+    return text;
+}
+
 void Text::draw(QPainter* painter)
 {
+    painter->setPen(this->getPen());
     painter->setFont(font);
     painter->drawText(rect, flag, text);
 }

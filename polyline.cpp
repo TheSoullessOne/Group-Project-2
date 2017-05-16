@@ -9,6 +9,7 @@ Polyline::Polyline(vector<QPoint> points)
 
 void Polyline::draw(QPainter *painter)
 {
+    painter->setPen(this->getPen());
     painter->drawPolyline(myPoly);
 }
 

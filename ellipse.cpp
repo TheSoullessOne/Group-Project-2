@@ -9,6 +9,8 @@ Ellipse::Ellipse(double x1, double y1, double Maj, double Min){
 
 void Ellipse::draw(QPainter* painter)
 {
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
     painter->drawEllipse(point, semiMajor, semiMinor);
 }
 

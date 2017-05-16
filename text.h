@@ -30,6 +30,8 @@ public:
     void setFontFamily(QString);
     QString getFontFamily() const;
 
+    static void printTextStuff(QTextStream &output, Text *textShape);
+    QString convertAlignmentToString(Qt::AlignmentFlag);
 
     void draw(QPainter* painter);
     void move();

@@ -8,6 +8,8 @@ Polygon::Polygon(vector<QPoint> points)  {
 
 void Polygon::draw(QPainter* painter)
 {
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
     painter->drawPolygon(myPoly);
 }
 
