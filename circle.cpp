@@ -8,6 +8,8 @@ Circle::Circle(double x1, double y1, double r)  {
 
 void Circle::draw(QPainter* painter)
 {
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
     painter->drawEllipse(point, radius, radius);
 }
 

@@ -77,6 +77,7 @@ private slots:
     void on_contactBackButt_clicked();
 
     void on_addFromFileButton_clicked();
+
     void on_loginConctButt_clicked();
 
     void on_graphicsView_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint);
@@ -104,6 +105,11 @@ private slots:
     QFont::Style convertTextFontStyle(QString);
 
     QFont::Weight convertTextFontWeight(QString);
+
+    void OutputToFile();
+
+    void on_delIndexLineEdit_returnPressed();
+
 private:
     Ui::MainWindow *ui;
     RenderArea *renderArea;

@@ -12,11 +12,13 @@ public:
 
     static Manager* getInstance();
 
+    void draw(int index, QPainter *painter);
     void addShape(Shape* shape);
     void drawAll(QPainter *painter);
     void clear();
     bool isEmpty();
     int size();
+    vector<Shape*>& getVector();
 
 private:
     Manager();

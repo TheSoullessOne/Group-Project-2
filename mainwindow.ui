@@ -238,7 +238,7 @@
 background-color: rgb(254, 255, 217);</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="main_admin_page">
        <widget class="QPushButton" name="addShapeButt">
@@ -482,6 +482,52 @@ background-color: rgb(254, 255, 217);</string>
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;REMOVE SHAPE (or text)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
+       <widget class="RenderArea" name="delRender" native="true">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>120</y>
+          <width>621</width>
+          <height>271</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="delIndexLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>740</x>
+          <y>150</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="delShapeButton">
+        <property name="geometry">
+         <rect>
+          <x>740</x>
+          <y>320</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>716</x>
+          <y>130</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Enter index to delete:</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="edit_page">
        <widget class="QPushButton" name="back2AdminButt_3">
@@ -508,6 +554,16 @@ background-color: rgb(254, 255, 217);</string>
         </property>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;EDIT SHAPE (or text)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="RenderArea" name="editRender" native="true">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>110</y>
+          <width>591</width>
+          <height>261</height>
+         </rect>
         </property>
        </widget>
       </widget>
@@ -544,7 +600,7 @@ background-color: rgb(254, 255, 217);</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>570</y>
+        <y>590</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -564,16 +620,6 @@ background-color: rgb(254, 255, 217);</string>
       </property>
       <property name="text">
        <string>CONTACT US</string>
-      </property>
-     </widget>
-     <widget class="QTextBrowser" name="textBrowser">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>180</y>
-        <width>891</width>
-        <height>361</height>
-       </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="IdSortButton">
@@ -625,7 +671,7 @@ background-color: rgb(254, 255, 217);</string>
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Pick a list medthod :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Pick a list method :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="wallpaper_2">
@@ -644,16 +690,26 @@ background-color: rgb(254, 255, 217);</string>
        <string/>
       </property>
      </widget>
+     <widget class="RenderArea" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>150</y>
+        <width>871</width>
+        <height>431</height>
+       </rect>
+      </property>
+     </widget>
      <zorder>wallpaper_2</zorder>
      <zorder>basicPagebackButt</zorder>
      <zorder>viewPageTitle</zorder>
      <zorder>viewHelpButt</zorder>
      <zorder>viewContButt</zorder>
-     <zorder>textBrowser</zorder>
      <zorder>IdSortButton</zorder>
      <zorder>areaSortButton</zorder>
      <zorder>perimeterSortButton</zorder>
      <zorder>pickSortListLabel</zorder>
+     <zorder>widget</zorder>
     </widget>
     <widget class="QWidget" name="reviews_page">
      <widget class="QPushButton" name="reviewPageBackButt">
@@ -783,7 +839,7 @@ background-color: rgb(254, 255, 217);</string>
        <string notr="true">background-color: rgb(255, 175, 194);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="helpMainPage">
        <widget class="QLabel" name="label_10">

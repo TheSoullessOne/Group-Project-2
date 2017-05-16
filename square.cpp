@@ -12,6 +12,8 @@ Square::Square(int x1, int y1, int length)
 
 void Square::draw(QPainter *painter)
 {
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
     painter->drawRect(rect);
 }
 
