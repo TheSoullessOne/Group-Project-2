@@ -47,6 +47,5 @@ protected:
     ShapeType shape;
     QPen qPen;
     QBrush qBrush;
-
 };
 #endif // SHAPE_H
