@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1126</width>
-    <height>822</height>
+    <width>1052</width>
+    <height>678</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,60 +19,12 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeType">
-       <enum>QSizePolicy::MinimumExpanding</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>100</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="0" column="1">
-     <spacer name="verticalSpacer_3">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeType">
-       <enum>QSizePolicy::MinimumExpanding</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>80</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="0" column="3">
-     <spacer name="verticalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeType">
-       <enum>QSizePolicy::Preferred</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="0" column="2">
      <widget class="QStackedWidget" name="Main_Menu">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 170, 255);</string>
+       <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="login_page">
        <property name="sizePolicy">
@@ -81,59 +33,14 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="0">
-         <widget class="QPushButton" name="pushButton_5">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>CONTACT US</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="wallpaper">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:0.52 rgba(0, 0, 0, 0), stop:0.565 rgba(82, 121, 76, 33), stop:0.65 rgba(159, 235, 148, 64), stop:0.721925 rgba(255, 238, 150, 129), stop:0.77 rgba(255, 128, 128, 204), stop:0.89 rgba(191, 128, 255, 64), stop:1 rgba(0, 0, 0, 0));</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <layout class="QVBoxLayout" name="verticalLayout_3">
-          <item>
-           <spacer name="verticalSpacer_4">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>58</width>
-              <height>748</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </item>
-       </layout>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <widget class="QLabel" name="login_title">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>220</y>
+          <x>444</x>
+          <y>210</y>
           <width>91</width>
           <height>41</height>
          </rect>
@@ -151,8 +58,8 @@
        <widget class="QLabel" name="userNameLabel">
         <property name="geometry">
          <rect>
-          <x>356</x>
-          <y>310</y>
+          <x>360</x>
+          <y>270</y>
           <width>61</width>
           <height>20</height>
          </rect>
@@ -170,8 +77,8 @@
        <widget class="QLabel" name="passwordLabel">
         <property name="geometry">
          <rect>
-          <x>356</x>
-          <y>340</y>
+          <x>360</x>
+          <y>300</y>
           <width>61</width>
           <height>20</height>
          </rect>
@@ -189,8 +96,8 @@
        <widget class="QLineEdit" name="userNameLineEdit">
         <property name="geometry">
          <rect>
-          <x>460</x>
-          <y>310</y>
+          <x>464</x>
+          <y>270</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -205,8 +112,8 @@
        <widget class="QLineEdit" name="passwordLineEdit">
         <property name="geometry">
          <rect>
-          <x>460</x>
-          <y>340</y>
+          <x>464</x>
+          <y>300</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -221,8 +128,8 @@
        <widget class="QPushButton" name="loginEnterButton">
         <property name="geometry">
          <rect>
-          <x>500</x>
-          <y>370</y>
+          <x>504</x>
+          <y>330</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -275,17 +182,68 @@
          <string>HELP</string>
         </property>
        </widget>
-       <zorder>wallpaper</zorder>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>9</y>
+          <width>78</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>CONTACT US</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>90</y>
+          <width>721</width>
+          <height>421</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:0.52 rgba(0, 0, 0, 0), stop:0.565 rgba(82, 121, 76, 33), stop:0.65 rgba(159, 235, 148, 64), stop:0.721925 rgba(255, 238, 150, 129), stop:0.77 rgba(255, 128, 128, 204), stop:0.89 rgba(191, 128, 255, 64), stop:1 rgba(0, 0, 0, 0));</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>540</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://youtu.be/L2WIg3xoSw8&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Learn more about us!!&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <zorder>label_11</zorder>
        <zorder>login_title</zorder>
        <zorder>userNameLabel</zorder>
        <zorder>passwordLabel</zorder>
        <zorder>userNameLineEdit</zorder>
        <zorder>passwordLineEdit</zorder>
        <zorder>loginEnterButton</zorder>
-       <zorder>pushButton_5</zorder>
        <zorder>loginRevButt</zorder>
        <zorder>loginHelpButt</zorder>
-       <zorder>verticalLayoutWidget_3</zorder>
+       <zorder>pushButton_5</zorder>
+       <zorder>label_12</zorder>
       </widget>
       <widget class="QWidget" name="admi_page">
        <property name="styleSheet">
@@ -357,17 +315,21 @@
 background-color: rgb(254, 255, 217);</string>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="main_admin_page">
          <widget class="QPushButton" name="addShapeButt">
           <property name="geometry">
            <rect>
-            <x>390</x>
-            <y>50</y>
-            <width>101</width>
+            <x>380</x>
+            <y>150</y>
+            <width>131</width>
             <height>23</height>
            </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(34, 159, 255);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
           </property>
           <property name="text">
            <string>ADD SHAPE</string>
@@ -376,11 +338,15 @@ background-color: rgb(254, 255, 217);</string>
          <widget class="QPushButton" name="remShapeButt">
           <property name="geometry">
            <rect>
-            <x>390</x>
-            <y>80</y>
-            <width>101</width>
+            <x>380</x>
+            <y>180</y>
+            <width>131</width>
             <height>23</height>
            </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(34, 159, 255);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
           </property>
           <property name="text">
            <string>REMOVE SHAPE</string>
@@ -389,11 +355,15 @@ background-color: rgb(254, 255, 217);</string>
          <widget class="QPushButton" name="editShapeButt">
           <property name="geometry">
            <rect>
-            <x>390</x>
-            <y>110</y>
-            <width>101</width>
+            <x>380</x>
+            <y>210</y>
+            <width>131</width>
             <height>23</height>
            </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(34, 159, 255);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
           </property>
           <property name="text">
            <string>EDIT SHAPE</string>
@@ -402,11 +372,15 @@ background-color: rgb(254, 255, 217);</string>
          <widget class="QPushButton" name="viewShapeButt">
           <property name="geometry">
            <rect>
-            <x>390</x>
-            <y>140</y>
-            <width>101</width>
+            <x>380</x>
+            <y>240</y>
+            <width>131</width>
             <height>23</height>
            </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(34, 159, 255);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
           </property>
           <property name="text">
            <string>VIEW SHAPE</string>
@@ -443,10 +417,10 @@ background-color: rgb(254, 255, 217);</string>
          <widget class="RenderArea" name="addRender" native="true">
           <property name="geometry">
            <rect>
-            <x>40</x>
+            <x>0</x>
             <y>120</y>
-            <width>491</width>
-            <height>361</height>
+            <width>661</width>
+            <height>371</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -469,10 +443,10 @@ background-color: rgb(254, 255, 217);</string>
          <widget class="QWidget" name="verticalLayoutWidget">
           <property name="geometry">
            <rect>
-            <x>560</x>
+            <x>660</x>
             <y>120</y>
-            <width>268</width>
-            <height>253</height>
+            <width>221</width>
+            <height>251</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout">
@@ -631,6 +605,22 @@ background-color: rgb(254, 255, 217);</string>
          </widget>
         </widget>
        </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>10</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://youtu.be/L2WIg3xoSw8&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Learn more about us!!&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="view_basic_page">
        <widget class="QPushButton" name="basicPagebackButt">
@@ -763,6 +753,22 @@ background-color: rgb(254, 255, 217);</string>
          <string/>
         </property>
        </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>10</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://youtu.be/L2WIg3xoSw8&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Learn more about us!!&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
        <zorder>wallpaper_2</zorder>
        <zorder>basicPagebackButt</zorder>
        <zorder>viewPageTitle</zorder>
@@ -773,7 +779,7 @@ background-color: rgb(254, 255, 217);</string>
        <zorder>areaSortButton</zorder>
        <zorder>perimeterSortButton</zorder>
        <zorder>pickSortListLabel</zorder>
-       <zorder>verticalSpacer_6</zorder>
+       <zorder>label_14</zorder>
       </widget>
       <widget class="QWidget" name="reviews_page">
        <widget class="QPushButton" name="reviewPageBackButt">
@@ -844,12 +850,28 @@ background-color: rgb(254, 255, 217);</string>
          <string/>
         </property>
        </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://youtu.be/L2WIg3xoSw8&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Learn more about us!!&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
        <zorder>wallpaper_3</zorder>
        <zorder>reviewPageBackButt</zorder>
        <zorder>reviewPageTitle</zorder>
        <zorder>reviewHelpButt</zorder>
        <zorder>reviewContButt</zorder>
-       <zorder>verticalSpacer_7</zorder>
+       <zorder>label_15</zorder>
       </widget>
       <widget class="QWidget" name="help_page">
        <widget class="QPushButton" name="helpBackButt">
@@ -904,7 +926,7 @@ background-color: rgb(254, 255, 217);</string>
          <string notr="true">background-color: rgb(255, 175, 194);</string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="helpMainPage">
          <widget class="QLabel" name="label_10">
@@ -1006,6 +1028,34 @@ p, li { white-space: pre-wrap; }
            <string>BACK MAIN HELP</string>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_2">
+          <property name="geometry">
+           <rect>
+            <x>35</x>
+            <y>41</y>
+            <width>811</width>
+            <height>391</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(170, 255, 255);</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'OCR A Extended'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;HOW TO ADD A SHAPE?&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Before being able to add/ remove/ edit a shape you must be an administrator.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 1: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Login as an administrator(you will be directed to the main admin menu)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 2: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;click on add shape&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 3: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;On the right side of the screen you will have two options: 1. file upload 2. manual, select the one you desire.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 4: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Make or upload shape.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;**changes should save inbetween the changes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
         </widget>
         <widget class="QWidget" name="how2_rem">
          <widget class="QPushButton" name="helpBackButt_4">
@@ -1019,6 +1069,33 @@ p, li { white-space: pre-wrap; }
           </property>
           <property name="text">
            <string>BACK MAIN HELP</string>
+          </property>
+         </widget>
+         <widget class="QTextBrowser" name="textBrowser_3">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>30</y>
+            <width>811</width>
+            <height>411</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(170, 255, 255);</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'OCR A Extended'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;HOW TO REMOVE A SHAPE?&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Before being able to add/ remove/ edit a shape you must be an administrator.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 1: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Login as an administrator(you will be directed to the main admin menu)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 2: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;click on REMOVE shape&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 3:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;**Changes should save inbetween the changes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </widget>
@@ -1036,6 +1113,28 @@ p, li { white-space: pre-wrap; }
            <string>BACK MAIN HELP</string>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_4">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>40</y>
+            <width>811</width>
+            <height>391</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(170, 255, 255);</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'OCR A Extended'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;HOW TO EDIT A SHAPE?&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Before being able to add/ remove/ edit a shape you must be an administrator.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
         </widget>
         <widget class="QWidget" name="how2_view">
          <widget class="QPushButton" name="helpBackButt_6">
@@ -1049,6 +1148,28 @@ p, li { white-space: pre-wrap; }
           </property>
           <property name="text">
            <string>BACK MAIN HELP</string>
+          </property>
+         </widget>
+         <widget class="QTextBrowser" name="textBrowser_5">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>50</y>
+            <width>811</width>
+            <height>391</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(170, 255, 255);</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'OCR A Extended'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;HOW TO VIEW A SHAPE?&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Before being able to add/ remove/ edit a shape you must be an administrator.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </widget>
@@ -1069,12 +1190,28 @@ p, li { white-space: pre-wrap; }
          <string/>
         </property>
        </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>10</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://youtu.be/L2WIg3xoSw8&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Learn more about us!!&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
        <zorder>wallpaper_4</zorder>
        <zorder>helpBackButt</zorder>
        <zorder>helpTitle</zorder>
        <zorder>helpContButt</zorder>
        <zorder>help_pages</zorder>
-       <zorder>verticalSpacer_8</zorder>
+       <zorder>label_16</zorder>
       </widget>
       <widget class="QWidget" name="contact_page">
        <widget class="QPushButton" name="contactBackButt">
@@ -1093,8 +1230,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QLabel" name="contactPageTitle">
         <property name="geometry">
          <rect>
-          <x>400</x>
-          <y>10</y>
+          <x>440</x>
+          <y>60</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -1106,8 +1243,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QLabel" name="contactInfo">
         <property name="geometry">
          <rect>
-          <x>260</x>
-          <y>50</y>
+          <x>300</x>
+          <y>100</y>
           <width>421</width>
           <height>311</height>
          </rect>
@@ -1132,8 +1269,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QPushButton" name="maintenanceButt">
         <property name="geometry">
          <rect>
-          <x>404</x>
-          <y>440</y>
+          <x>444</x>
+          <y>490</y>
           <width>121</width>
           <height>23</height>
          </rect>
@@ -1142,6 +1279,45 @@ p, li { white-space: pre-wrap; }
          <string>MAINTENANCE</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_17">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>430</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://youtu.be/L2WIg3xoSw8&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Learn more about us!!&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1031</width>
+          <height>611</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:1.069, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <zorder>label_18</zorder>
+       <zorder>contactBackButt</zorder>
+       <zorder>contactPageTitle</zorder>
+       <zorder>contactInfo</zorder>
+       <zorder>contactHelpButt</zorder>
+       <zorder>maintenanceButt</zorder>
+       <zorder>label_17</zorder>
       </widget>
       <widget class="QWidget" name="maintenance">
        <widget class="QTextBrowser" name="maintenanceInfo">
@@ -1239,7 +1415,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1126</width>
+     <width>1052</width>
      <height>18</height>
     </rect>
    </property>
