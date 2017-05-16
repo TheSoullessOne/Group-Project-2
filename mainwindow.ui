@@ -18,13 +18,13 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0">
+    <item row="0" column="1">
      <widget class="QStackedWidget" name="Main_Menu">
       <property name="styleSheet">
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="login_page">
        <property name="sizePolicy">
@@ -252,8 +252,8 @@
        <widget class="QPushButton" name="adminPageBackButt">
         <property name="geometry">
          <rect>
-          <x>800</x>
-          <y>590</y>
+          <x>820</x>
+          <y>580</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -278,8 +278,8 @@
        <widget class="QPushButton" name="adminHelpButt">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>570</y>
+          <x>80</x>
+          <y>580</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -304,8 +304,8 @@
        <widget class="QStackedWidget" name="Admin_Pages">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>60</y>
+          <x>80</x>
+          <y>70</y>
           <width>881</width>
           <height>501</height>
          </rect>
@@ -627,7 +627,7 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
         <property name="geometry">
          <rect>
           <x>800</x>
-          <y>590</y>
+          <y>570</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -786,7 +786,7 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
         <property name="geometry">
          <rect>
           <x>800</x>
-          <y>590</y>
+          <y>570</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -877,8 +877,8 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
        <widget class="QPushButton" name="helpBackButt">
         <property name="geometry">
          <rect>
-          <x>800</x>
-          <y>590</y>
+          <x>810</x>
+          <y>570</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -926,7 +926,7 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
          <string notr="true">background-color: rgb(255, 175, 194);</string>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>4</number>
         </property>
         <widget class="QWidget" name="helpMainPage">
          <widget class="QLabel" name="label_10">
@@ -1091,10 +1091,10 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;HOW TO REMOVE A SHAPE?&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Before being able to add/ remove/ edit a shape you must be an administrator.&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 1: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Login as an administrator(you will be directed to the main admin menu)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 1: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Login as an administrator(you will be directed to the main admin menu)&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 2: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;click on REMOVE shape&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 3:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 3: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Click on image you would like to delete and then press delete&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;**Changes should save inbetween the changes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
@@ -1132,7 +1132,12 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'OCR A Extended'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;HOW TO EDIT A SHAPE?&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Before being able to add/ remove/ edit a shape you must be an administrator.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Before being able to add/ remove/ edit a shape you must be an administrator.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 1: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Login as an administrator(you will be directed to the main admin menu)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 2: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Cick on EDIT shape&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 3: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Stretch or move your shape.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;**Changes should save inbetween the changes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </widget>
@@ -1169,7 +1174,12 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'OCR A Extended'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;HOW TO VIEW A SHAPE?&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Before being able to add/ remove/ edit a shape you must be an administrator.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Before being able to add/ remove/ edit a shape you must be an administrator.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 1: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Login as an administrator(you will be directed to the main admin menu) or as regular user(you will be directed to the view page).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 2: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;click on VIEW shape&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Step 3: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Select the sorting list you prefer.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;**Changes should save inbetween the changes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </widget>
@@ -1217,8 +1227,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QPushButton" name="contactBackButt">
         <property name="geometry">
          <rect>
-          <x>800</x>
-          <y>590</y>
+          <x>820</x>
+          <y>570</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -1323,8 +1333,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QTextBrowser" name="maintenanceInfo">
         <property name="geometry">
          <rect>
-          <x>180</x>
-          <y>160</y>
+          <x>230</x>
+          <y>170</y>
           <width>561</width>
           <height>221</height>
          </rect>
@@ -1367,8 +1377,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QTextEdit" name="maintenanceNote">
         <property name="geometry">
          <rect>
-          <x>180</x>
-          <y>390</y>
+          <x>230</x>
+          <y>400</y>
           <width>561</width>
           <height>31</height>
          </rect>
@@ -1388,7 +1398,7 @@ p, li { white-space: pre-wrap; }
         <property name="geometry">
          <rect>
           <x>800</x>
-          <y>590</y>
+          <y>570</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -1397,6 +1407,27 @@ p, li { white-space: pre-wrap; }
          <string>BACK</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_19">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1031</width>
+          <height>621</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qradialgradient(spread:reflect, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <zorder>label_19</zorder>
+       <zorder>maintenanceInfo</zorder>
+       <zorder>Maintenance_title</zorder>
+       <zorder>maintenanceNote</zorder>
+       <zorder>maintenanceBackButt</zorder>
       </widget>
      </widget>
     </item>
