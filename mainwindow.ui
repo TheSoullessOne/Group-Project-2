@@ -72,7 +72,7 @@
        <string notr="true">background-color: rgb(255, 170, 255);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="login_page">
        <property name="sizePolicy">
@@ -83,6 +83,21 @@
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="2" column="0">
+         <widget class="QLabel" name="wallpaper">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>CONTACT US</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
          <widget class="QLabel" name="wallpaper">
           <property name="sizePolicy">
            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
@@ -95,19 +110,6 @@
           </property>
           <property name="text">
            <string/>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QPushButton" name="pushButton_5">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>CONTACT US</string>
           </property>
          </widget>
         </item>
@@ -357,7 +359,7 @@
 background-color: rgb(254, 255, 217);</string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>3</number>
         </property>
         <widget class="QWidget" name="main_admin_page">
          <widget class="QPushButton" name="addShapeButt">
@@ -773,6 +775,7 @@ background-color: rgb(254, 255, 217);</string>
        <zorder>areaSortButton</zorder>
        <zorder>perimeterSortButton</zorder>
        <zorder>pickSortListLabel</zorder>
+       <zorder>verticalSpacer_6</zorder>
       </widget>
       <widget class="QWidget" name="reviews_page">
        <widget class="QPushButton" name="reviewPageBackButt">
@@ -848,6 +851,7 @@ background-color: rgb(254, 255, 217);</string>
        <zorder>reviewPageTitle</zorder>
        <zorder>reviewHelpButt</zorder>
        <zorder>reviewContButt</zorder>
+       <zorder>verticalSpacer_7</zorder>
       </widget>
       <widget class="QWidget" name="help_page">
        <widget class="QPushButton" name="helpBackButt">
@@ -1072,6 +1076,7 @@ p, li { white-space: pre-wrap; }
        <zorder>helpTitle</zorder>
        <zorder>helpContButt</zorder>
        <zorder>help_pages</zorder>
+       <zorder>verticalSpacer_8</zorder>
       </widget>
       <widget class="QWidget" name="contact_page">
        <widget class="QPushButton" name="contactBackButt">
