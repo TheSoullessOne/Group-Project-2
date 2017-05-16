@@ -44,9 +44,25 @@ MainWindow::~MainWindow()
 //Main Menu Stuff
 //-------------------------------------------------------
 void MainWindow::on_loginEnterButton_clicked()
-{
-    ui->Main_Menu->setCurrentIndex(ADMIN);
-    ui->Admin_Pages->setCurrentIndex(ADMIN_MEN);
+{ 
+    QString username = ui->userNameLineEdit->text();
+    QString password = ui->passwordLineEdit->text();
+
+    username = username.toLower();
+    password = password.toLower();
+
+    if(username == "admin"  &&
+       password == "password")  {
+        ui->Main_Menu->setCurrentIndex(ADMIN);
+        ui->Admin_Pages->setCurrentIndex(ADMIN_MEN);
+        ui->userNameLineEdit->clear();
+        ui->passwordLineEdit->clear();
+    }
+    else
+    {
+        // Jump to member info page if password and id are correct
+        QMessageBox::critical(this, "Login Error", "Incorrect Password Or Username");
+    }
 }
 
 void MainWindow::on_loginConctButt_clicked()
